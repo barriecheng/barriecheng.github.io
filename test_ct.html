@@ -29,7 +29,7 @@
 <script type="text/javascript" src="https://stg.portal.ott.hinet.net/resources/js/base.js?v=20200731"></script>
 <script>
 var gaPageView = true;
-var isLogin = true;
+var isLogin = false;
 </script>
 <!-- XFS -->
 <style id="antiClickjack">body{display:none !important;}</style>
@@ -96,12 +96,6 @@ var user_id="";
 var AuthloginId="";
 var Authfor="";
 var LoginMethod=""; 
-
-gaSessionId='4b4165569167068df7ec8c4aecf9ce618c264ccc0d951f3d4e07373d5aecefb3';
-gaUser_id=de("5526305590");
-gaAuthloginId=de("5526305590");
-gaLoginMethod ="4";
-gaAuthfor="46063|23126|113122|10437|114176|114175|180|7016|7017";
 
 
 if(null!=gaSessionId && gaPageView){
@@ -308,7 +302,7 @@ var templateVoteBoard = $('#templateVoteBoard').html();
 Mustache.parse(templateVoteBoard);
 function openVote(id){
 	if(!isLogin){
-		location = '/login.do?others=74c04dddcf88af4443aedf6672a92f212391748c48e04e3d1e3dca94210e3e500aa228b95ffda0f926c67e685e1ef6f90db71d47104743f62da389aebb8870b06dd050323d69fbfd&voteId=' + id;
+		location = '/hamivideo/login.do?others=e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2&voteId=' + id;
 		return;
 	}
 	voteId = id;
@@ -316,7 +310,7 @@ function openVote(id){
 		$.ajax({
 			type : 'POST',
 			cache : false,
-			url : '/api/voteList.do',
+			url : '/hamivideo/api/voteList.do',
 			data:{
 			'voteId':voteId,
 			},
@@ -423,7 +417,7 @@ function sendVote(){
 		$.ajax({
 			type : 'POST',
 			cache : false,
-			url : '/api/vote.do',
+			url : '/hamivideo/api/vote.do',
 			data:{
 			'voteId':voteId,
 			'data':data,
@@ -452,39 +446,436 @@ function sendVote(){
 		alert(err);
 	}
 }
-</script><div class="memberBlock" style="display: none;">
+</script><!-- popup login -->
+  <div class="popup_overlay" id="login_overlay" hidden></div>
+  <div class="popup" id="popup_login" hidden><div class="bt_close"></div>
+    <div class="loginContent" id="loginMethod" hidden>
+      <h2>登入 Hami Video</h2>
+      <h3></h3>
+      <div class="section" id="login_section1">
+      	<div class="lineType lineType2" hidden>
+	        <p>已偵測到您的行動網路手機門號</p>
+	        <div class="formBlock">
+	          <input type="text" id="lineNo2" class="input_phone" placeholder="" value="0912 *** 123" readonly="true">
+	        </div>
+	        <div class="btSet"><a href="#" onclick="loginBy('mobile');return false;">立即登入</a></div>
+        </div>
+        <div class="lineType lineType1" hidden>
+        <div class="btSet"><a href="#" onclick="loginBy('otp');return false;">手機門號登入</a></div>
+        </div>
+        <p class="note tCenter">* 您的手機門號就是登入帳號</p>
+        <div class="dividers"><span>或</span></div>
+        <div class="btSet bt_other"><a href="#" onclick="loginDeviceInfoDetect();return false;">其他方式登入</a></div>
+        
+        <!--now: Mon Jun 28 10:14:29 CST 2021-->  
+		<div class="btSet bt_foxplus"><a href="#" onclick="loginBy('otp',true);return false;">FOX+登入</a></div>
+
+        <p class="foxplusnote">
+	       	註：完成登入即表示同意本<a href="/hamivideo/contract.do">服務條款</a>以及<a href="/hamivideo/privacy.do">隱私權政策</a>
+	    </p>
+      </div>
+      <div class="section" id="login_section2" hidden>
+          <p>已偵測此區域的寬頻網路 HN (HiNet) 帳號</p>
+          <div class="formBlock">
+            <input type="text" id="lineNo1" class="input_wifi" placeholder="" value="HN - 80 ***** 123" readonly="true">
+          </div>
+          <div class="btSet"><a href="#" onclick="loginBy('wifi');return false;">立即登入</a></div>
+          <p class="note">* 若使用前述中華寬頻HN為登入帳號，日後皆需在相同寬頻網域才能再登入使用；且擁有此中華寬頻HN帳號與密碼者皆可登入。</p>
+          <p class="note">* 請勿使用公共區域網路登入，如咖啡店、社區共用網路、公開場所免費網路等。</p>
+          <div class="dividers"><span>或</span></div>
+          <div class="btSet bt_other"><a href="#" onclick="loginBy('hn');return false;">其他中華寬頻HN帳號登入</a></div>
+          <div class="btSet bt_other"><a href="#" onclick="loginOthers();return false;">其他方式登入</a></div>
+        </div>
+        
+        <div class="section" id="login_section3" hidden>
+          <div class="btSet bt_phone lineType lineType1"><a href="#" onclick="loginBy('otp');return false;">手機門號登入</a></div>
+          <p class="note mBtm tCenter lineType lineType1">* 您的手機門號就是登入帳號</p>
+          <div class="btSet bt_wifi lineType lineType1"><a href="#" onclick="loginBy('hn');return false;">中華寬頻HN帳號登入</a></div>
+          <div class="btSet bt_wifi lineType lineType2"><a href="#" onclick="loginBy('hn');return false;">中華寬頻HN帳號登入</a></div>
+          <p class="note mBtm tCenter lineType lineType2">* 您的中華寬頻 HN (HiNet) 帳號就是登入帳號</p>
+          <div class="btSet bt_wifi lineType lineType2"><a href="#" onclick="loginBy('otp');return false;">手機門號登入</a></div>
+          <div class="btSet bt_fb"><a href="#" onclick="loginBy('facebook');return false;">Facebook帳號登入</a></div>
+          <div class="btSet bt_google"><a href="#" onclick="loginBy('google');return false;">Google帳號登入</a></div>
+          <div class="btSet bt_cht"><a href="#" onclick="loginBy('hinet');return false;">中華電信會員帳號登入</a></div>
+          <div class="btSet bt_mod"><a href="#" onclick="loginBy('mod');return false;">MOD帳號登入</a></div>
+        </div>
+    </div>
+    <div class="loginContent" id="loginOtp" hidden>
+      <h2>輸入手機號碼</h2>
+      <h3></h3>
+      <div class="section">
+        <p>手機號碼</p>
+        <div class="formBlock">
+          <input type="text" class="input_phone" placeholder="輸入您的手機號碼" id="mobile" name="mobile" maxlength="10" inputmode="tel">
+        </div>
+        <div class="btSet bt_lock" id="step1Btn"><a href="#" onclick="goOtp();return false;">下一步</a></div>
+        <div  class="foxplusdescstyle" id="foxplusdesc" hidden>
+	       <p class="foxplustitle">Fox+中華用戶請注意</p>
+	       <div class="foxplusitem">
+		      <ol>
+		          <li>僅提供以中華電信手機門號申請FOX+服務之用戶登入使用</li>
+		          <li>請使用原申請之手機門號登入，才可續享相同權利，切勿使用其他方式登入</li>
+		          <li>FOX+服務不開放新用戶線上申租，若要申租請電洽客服專線0800-080-090 (中華行動電話直撥800)或親臨中華門市辦理</li>
+	     	  	  <li>登入後請至真心推薦頁下方的FOX+館專屬入口觀賞</li>
+	     	  </ol>
+	       </div>
+		</div>
+        
+        
+      </div>
+    </div>
+    <div class="loginContent" id="loginOtpVerify" hidden>
+      <h2 id="otpVerifyMessage">輸入驗證代碼</h2><!-- 無法驗證代碼，請再試一次 -->
+      <div class="section">
+        <p>驗證代碼</p>
+        <div class="formBlock">
+          <input type="text" class="input_valid" placeholder="輸入驗證碼" name="sms" id="sms" maxlength="6" inputmode="tel">
+        </div>
+        <h3>驗證碼已發送至 +886 <span id="mobile_view"></span></h3>
+        <div class="btSet mBtm bt_lock" id="step2Btn"><a href="#" onclick="doOtpLogin();return false;">完成</a></div>
+        <p class="note2"><a href="#" onclick="goOtp();return false;" id="sendSMS">沒收到簡訊？重新發送驗證碼</a></p>
+      </div>
+    </div>
+    <div class="loginContent" id="loginMod" hidden>
+      <h2 id="modVerifyMessage">輸入MOD配對碼</h2>
+      <h3></h3>
+      <div class="section">
+        <p>MOD配對碼</p>
+        <div class="formBlock">
+          <input type="text" class="input_tv" placeholder="輸入6位數配對碼" id="modCode" name="modCode" maxlength="6" inputmode="tel">
+        </div>
+        <div class="btSet bt_lock" id="step3Btn"><a href="#" onclick="doModLogin();return false;">登入</a></div>
+        <p class="note">* 從電視機進入MOD首頁選擇「設定」→「帳戶設定」→「多螢服務設定」→「取得配對碼」，輸入六位數字配對碼後並按下「登入」按鈕。</p>
+      </div>
+    </div>
+  </div><form name="loginForm" method="post" action="/hamivideo/loginTo.do">
+  	<input type="hidden" name="loginMethod">
+  	<input type="hidden" name="authLoginId">
+  	<input type="hidden" name="otpw">
+  	<input type="hidden" name="autoLogin">
+  	<input type="hidden" name="others" value="e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2">
+  	</form>
+<script>
+var needOverLay = false;
+	function loginDeviceInfoDetect(){
+		if(null==lineType){
+			try {				
+				$.ajax({
+					type : 'POST',
+					cache : false,
+					url : '/hamivideo/getDeviceLoginInfo.do',
+					async : true,
+					success : function(response) {//lineType 1hn 2手機
+						login(response.lineType, response.lineNo,true);
+						loginOthers();
+					},
+					error: function( jqXHR, textStatus, errorThrown ){
+						console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
+						alert('後端系統異常，請稍後再試');
+					},
+					beforeSend: function( jqXHR, settings ){
+						loadingToggle(needOverLay);
+					},
+					complete: function( jqXHR, textStatus ){
+						loadingToggle(needOverLay);
+					}
+				});
+			} catch (err) {
+				alert(err);
+			}
+		}else{
+			loginOthers();
+		}
+		lineType = null;
+	}
+	
+	function loginCheck(){
+		$('.memberBlock').hide();
+		if(null==lineType){
+			login(null, null);
+// 			try {				
+// 				$.ajax({
+// 					type : 'POST',
+// 					cache : false,
+// 					url : '/hamivideo/getDeviceLoginInfo.do',
+// 					async : true,
+// 					success : function(response) {
+// 						login(response.lineType, response.lineNo);
+// 					},
+// 					error: function( jqXHR, textStatus, errorThrown ){
+// 						console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
+// 						alert('後端系統異常，請稍後再試');
+// 					},
+// 					beforeSend: function( jqXHR, settings ){
+// 						loadingToggle(needOverLay);
+// 					},
+// 					complete: function( jqXHR, textStatus ){
+// 						loadingToggle(needOverLay);
+// 					}
+// 				});
+// 			} catch (err) {
+// 				alert(err);
+// 			}
+		}else{
+			login(lineType, lineNo);
+			
+		}
+		//lineType = null;
+	}
+	
+	function login(lineType, lineNo ,hideSection1){
+		$(window).scrollTop(0);
+		hn = (lineType == '1');
+		if(lineType){
+			$('#lineNo'+lineType).val(lineNo);
+		}else{
+			lineType='1';
+		}
+		$('.lineType').hide();
+		$('.lineType'+lineType).show();
+		
+		if(!(hideSection1!==undefined && hideSection1===true)){
+			$('#login_overlay,#popup_login,#loginMethod,#login_section1').show();
+
+		}
+			
+	}
+
+	function loginByOtp() {
+		location.href = 'otp.do?finishURL=' + ''
+			+ '&others=' + 'e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2';
+	}
+	function loginOthers() {
+		$("#loginMethod .section").hide();
+		if (hn) {
+			$("#login_section2").show();
+			hn = false;
+			return;
+		}else{
+			$("#login_section3").show();
+		}
+		//location = 'loginByOthers.do';
+	}
+	function loginBy(loginMethod,isFoxFlag) {
+		document.loginForm.loginMethod.value = loginMethod;
+		
+		if(isFoxFlag){//FOX+要在手機門號入頁show說明
+			$("#foxplusdesc").show();
+		}else{
+			$("#foxplusdesc").hide();
+		}
+
+		
+		switch(loginMethod){
+		case 'otp':
+			$("#loginMethod,#loginMethod .section").hide();
+			$('#mobile').val('');
+			$("#loginOtp").show();
+			$('#mobile').focus();
+			break;
+		case 'mod':
+			$('#modVerifyMessage').text('輸入MOD配對碼');
+			$("#loginMethod,#loginMethod .section").hide();
+			$('#modCode').val('');
+			$('#loginMod').show();
+			$('#modCode').focus();
+			break;
+		default:
+			document.loginForm.submit();
+			break;
+		}
+	}
+	var sendSMS_time;
+	function sendSMScounter(){
+		
+		$("#sendSMS").css("cursor","default");
+	    $("#sendSMS").text("沒收到簡訊？重新發送驗證碼("+sendSMS_time/1000+"秒)");
+	    if(sendSMS_time<=0){
+			$("#sendSMS").css("cursor","pointer");
+		    $("#sendSMS").text("沒收到簡訊？重新發送驗證碼");
+		}else{
+			setTimeout(sendSMScounter, 1000);
+		}
+	    sendSMS_time-=1000; 
+		//console.log($("#sendSMS").text() );
+	}
+	function goOtp(){
+		var text = $("#mobile").val();
+		if (text==''){
+			alert('請輸入手機門號');
+			$('#mobile').focus();
+			return false;
+		}
+		if(text.length!=10/* || text.substring(0,2)!='09' || !isNum(text)*/){
+			alert('手機門號格式錯誤，請重新輸入');
+			$('#mobile').focus();
+			return false;
+		}
+		try {
+			if($("#sendSMS").css("cursor")==="default"){  //是否還在倒數				
+				return;
+			}			
+			$.ajax({
+				type : 'POST',
+				data :{'authLoginId':$('#mobile').val()},
+				cache : false,
+				url : '/hamivideo/otpSendSms.do',
+				async : true,
+				dataType: "text",
+				success : function(response) {
+					if(response==''){
+						$('#mobile_view').text($('#mobile').val());
+						$("#loginOtp").hide();
+						$('#otpVerifyMessage').text('輸入驗證代碼');
+						$("#loginOtpVerify").show();
+						$('#sms').focus();
+						
+						//倒數59秒
+						sendSMS_time=59*1000;
+						sendSMScounter();$
+					} else {
+						alert(response);
+					}
+				},
+				error: function( jqXHR, textStatus, errorThrown ){
+					console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
+					alert('後端系統異常，請稍後再試');
+				},
+				beforeSend: function( jqXHR, settings ){
+					loadingToggle(needOverLay);
+				},
+				complete: function( jqXHR, textStatus ){
+					loadingToggle(needOverLay);
+				}
+			});
+		} catch (err) {
+			alert(err);
+		}
+	}
+	
+	$("#mobile").on("keyup", function(e){
+	$("#step1Btn").addClass("bt_lock");
+	if($(this).val().length>0){
+		$("#step1Btn").removeClass("bt_lock");
+		if (e.keyCode == 13) {
+	    	goOtp();
+	    }
+	}
+	});
+	$("#sms").on("keyup", function(e){
+		$("#step2Btn").addClass("bt_lock");
+		if($(this).val().length>0){
+			$("#step2Btn").removeClass("bt_lock");
+			if (e.keyCode == 13) {
+		    	doOtpLogin();
+		    }
+		}
+	});
+	$("#modCode").on("keyup", function(e){
+		$("#step3Btn").addClass("bt_lock");
+		if($(this).val().length>0){
+			$("#step3Btn").removeClass("bt_lock");
+			if (e.keyCode == 13) {
+		    	doModLogin();
+		    }
+		}
+	});
+	
+	function isNum(text){
+		for(var i=0;i<text.length;i++){
+			if(isNaN(text)){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	function doOtpLogin(){
+		if ($("#sms").val()==''){
+			alert('請輸入簡訊認證碼');
+			$('#sms').focus();
+			return false;
+		}		
+		document.loginForm.authLoginId.value = $("#mobile").val();
+		document.loginForm.otpw.value = $("#sms").val();
+		document.loginForm.submit();
+	}
+	
+	function doModLogin(){
+		if ($("#modCode").val()==''){
+			alert('請輸入配對碼');
+			$('#modCode').focus();
+			return false;
+		}
+		document.loginForm.otpw.value = $("#modCode").val();
+		document.loginForm.submit();
+	}
+	
+	function doKickLogin(){
+		var radios = $('input[name=deviceKickRadio]:checked');
+		if(radios.length==0){
+			alert('請選擇要登出的裝置!');
+			return;
+		}
+		var otpw = radios[0].value;
+		document.loginForm.loginMethod.value = 'kick';
+		document.loginForm.otpw.value = otpw;
+		document.loginForm.submit();
+	}
+	
+	function alertFoxMsg(){//2020/3
+		alert('✧*灑花加轉圈✧*\nFOX+喬遷之喜\n2020/4/29起陰屍路、良醫墨非也可以在Hami Video看到了! 走過路過不錯過，快到「真心推薦>FOX+館入口卡片」點選進入Hami Video FOX+館繼續觀賞!');
+	}
+	
+	var lineType = null;
+
+	var lineNo = null;
+	var login_loginMethod = null;
+	var login_authLoginId = null;
+	var login_returnCode = null;
+	
+	var hn = false;
+	if(login_returnCode=='2'){//kick someone
+		$('#login_overlay,#loginKick').show();
+	}else if(null!=login_loginMethod){
+		document.loginForm.loginMethod.value = login_loginMethod;
+		switch(login_loginMethod){
+		case 'otp':
+			$('#mobile').val(login_authLoginId);
+			$('#mobile_view').text(login_authLoginId);
+			$('#otpVerifyMessage').text(login_returnMessage);
+			$('#login_overlay,#popup_login,#loginOtpVerify').show();
+			$('#sms').focus();
+			
+			//倒數59秒
+			sendSMS_time=59*1000;
+			sendSMScounter();
+		break;
+		case 'mod':
+			$('#modVerifyMessage').text(login_returnMessage);
+			$('#login_overlay,#popup_login,#loginMod').show();
+			$('#modCode').focus();
+		break;
+		default:
+			alert(login_returnCode+':'+login_returnMessage);
+			loginCheck();
+		break;
+		}
+	}
+</script>
+<div class="memberBlock" style="display: none;">
     <div class="bt_close"></div>
     <div class="mCustomScrollbar">
     <div class="com">
-    <div class="card vipType">
-        <div class="info">
-          <div class="pic"><div class="img">
-
-          <img src="https://stg.portal.ott.hinet.net/resources/images/ic_my_photo_default_5g.png" alt="">
-				</div></div>
-          <p class="name">
-          <input type="text" id="edit_nickname" placeholder="" value="{select}" disabled>
-          </p>
-        </div>
-        
-
-		<p class="type">5G尊榮訂閱會員</p>
-							<p class="id">0955036255 登錄</p>
-        <div class="bt_edit edit_nickname"><a href="#" onclick="return gaEventFunction(this,'編輯帳號');">編輯</a></div>
-        <div class="bt_change"><a href="/logout.do" onclick="return gaEventFunction(this);">登出</a></div>
+    <div class="card loginType">
+        <div class="btSet"><a href="#" onclick="loginCheck();return gaEventFunction(this,'登入/註冊');">登入 / 註冊</a></div>
+        <p>立即免費登入</p>
       </div>
-    <div class="bt_moreType"><a href="/subscribe.do" onclick="return gaEventFunction(this);">更多影音方案</a></div>
+    <div class="bt_moreType"><a href="/hamivideo/subscribe.do" onclick="return gaEventFunction(this);">更多影音方案</a></div>
       <div>
       <ul>
-      	<li><a href="/personal/favorite.do" onclick="return gaEventNav(this);">我的收藏</a></li>
-        <li><a href="/personal/history.do" onclick="return gaEventNav(this);">觀看歷史</a></li>
-        <li><a href="/personal/purchaseRecord.do" onclick="return gaEventNav(this);">購買紀錄</a></li>
-        <li><a href="/personal/coupon.do" onclick="return gaEventNav(this);">優惠兌換<i class="gift"></i></a></li>
-        <li><a href="/personal/singleCoupon.do" onclick="return gaEventNav(this);">單點抵用券</a></li>
-        <li><a href="/personal/setting.do" onclick="return gaEventNav(this);">其他設定</a></li>
-        <li><a href="/logout.do" onclick="return gaEventNav(this);">登出</a></li>
-        <li><a href="/qa.do" onclick="return gaEventNav(this);">常見問題</a></li>
-        <li><a href="/contact.do" onclick="return gaEventNav(this);">聯絡客服</a></li>
+      	<li><a href="/hamivideo/qa.do" onclick="return gaEventNav(this);">常見問題</a></li>
+        <li><a href="/hamivideo/contact.do" onclick="return gaEventNav(this);">聯絡客服</a></li>
       </ul>
       </div>
     </div>
@@ -529,7 +920,7 @@ function sendVote(){
 			$.ajax({
 				type : 'post',
 				cache : false,
-				url : '/personal/nicknameSave.do',
+				url : '/hamivideo/personal/nicknameSave.do',
 				data:{
 					nickname:nickname.trim()
 				},
@@ -593,12 +984,12 @@ function sendVote(){
     </div>
   </div><div class="wrapper">
 <header >
-      <div class="logo"><a href="/index.do">Hami Video</a></div>
+      <div class="logo"><a href="/hamivideo/index.do">Hami Video</a></div>
        	<nav>
       <div class="mTitle" onclick="$('#mobileNav').toggle();">瀏覽</div>
         <ul id="mobileNav">
       <li >
-        	<a href="/真心推薦.do" title='真心推薦' onclick="return gaEventMenu('真心推薦');">
+        	<a href="/hamivideo/真心推薦.do" title='真心推薦' onclick="return gaEventMenu('真心推薦');">
         		<i class="n1 "></i>
         		
         		真心推薦</a>
@@ -607,8 +998,8 @@ function sendVote(){
         
         
         <li >
-        	<a href="/電視館/全部.do" title='電視館' onclick="return gaEventMenu('電視館');">
-        		<i class="n2 open"></i>
+        	<a href="/hamivideo/電視館/全部.do" title='電視館' onclick="return gaEventMenu('電視館');">
+        		<i class="n2 "></i>
         		
         		電視館</a>
       	  </li>
@@ -616,7 +1007,7 @@ function sendVote(){
         
         
         <li >
-        	<a href="/運動館.do" title='運動館' onclick="return gaEventMenu('運動館');">
+        	<a href="/hamivideo/運動館.do" title='運動館' onclick="return gaEventMenu('運動館');">
         		<i class="n3 "></i>
         		
         		運動館</a>
@@ -625,8 +1016,8 @@ function sendVote(){
         
         
         <li >
-        	<a href="/影劇館/最新.do" title='影劇館' onclick="return gaEventMenu('影劇館');">
-        		<i class="n4 open"></i>
+        	<a href="/hamivideo/影劇館/最新.do" title='影劇館' onclick="return gaEventMenu('影劇館');">
+        		<i class="n4 "></i>
         		
         		影劇館</a>
       	  </li>
@@ -634,7 +1025,7 @@ function sendVote(){
         
         
         <li >
-        	<a href="/單點電影/最新.do" title='單點電影' onclick="return gaEventMenu('單點電影');">
+        	<a href="/hamivideo/單點電影/最新.do" title='單點電影' onclick="return gaEventMenu('單點電影');">
         		<i class="n5 "></i>
         		
         		單點電影</a>
@@ -643,7 +1034,7 @@ function sendVote(){
         
         
         <li class="active">
-        	<a href="/奧運專區/直播.do" title='奧運專區' onclick="return gaEventMenu('奧運專區');">
+        	<a href="/hamivideo/奧運專區/直播.do" title='奧運專區' onclick="return gaEventMenu('奧運專區');">
         		<i class="n6 "></i>
         		
         		奧運專區</a>
@@ -654,34 +1045,9 @@ function sendVote(){
         </ul>
       </nav>
       <div class="topToolBlock">
-      <div class="top_buy"><a href="/subscribe.do" class="bt">訂閱</a></div>
-        <div class="top_alert "><a href="/personal/message.do"></a></div>
-<script>
-//查未讀訊息
-function checkAlert(){
-try {
-	$.ajax({
-		type : 'POST',
-		cache : false,
-		url : '/personal/countUnreadMessage.do',
-		async : true,
-		success : function(response) {
-			if(response.result){
-				$('.top_alert').addClass('on');
-			}
-		},
-		error : function(jqXHR, textStatus, errorThrown) {
-			console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
-			console.log('後端系統異常，請稍後再試');
-		}
-	});
-	} catch (err) {
-		console.log(err);
-	}
-}
-setTimeout(function(){checkAlert();}, 5000);
-</script>
-<div class="top_filter"><a href="/filter.do"></a></div>
+      <div class="top_buy"><a href="/hamivideo/subscribe.do" class="bt">訂閱</a></div>
+        <div class="top_alert "><a href="/hamivideo/personal/message.do"></a></div>
+<div class="top_filter"><a href="/hamivideo/filter.do"></a></div>
         <div class="top_search"><a href="#"></a>
           <div class="searchBlock" hidden>
             <div class="search"><input id="seach_keyword" type="text" placeholder="搜尋片名或人名關鍵字">
@@ -704,7 +1070,7 @@ $("#seach_keyword").on('keyup', function (e) {
     		alert('請輸入關鍵字!');
     		return;
     	}
-    	location = '/search.do?keyword=' + encodeURIComponent(keyword.trim());
+    	location = '/hamivideo/search.do?keyword=' + encodeURIComponent(keyword.trim());
     }
 });
 $(document).mouseup(function (e) {
@@ -752,13 +1118,13 @@ function getHotKeyword(){
 		$.ajax({
 			type : 'POST',
 			cache : false,
-			url : '/search/hotKeywords.do',
+			url : '/hamivideo/search/hotKeywords.do',
 			async : true,
 			success : function(data) {
 				if(data.length>0){
 					var html = '';
 					data.forEach(function(key) {
-						html += '<div class="item"><a href="/search.do?keyword='+encodeURIComponent(key)+'">'+key+'</a></div>';
+						html += '<div class="item"><a href="/hamivideo/search.do?keyword='+encodeURIComponent(key)+'">'+key+'</a></div>';
 					});
 					$('.list_keyword').html(html);
 					$('.keyword').show();
@@ -786,14 +1152,14 @@ $("#seach_keyword").autocomplete({
 			$.ajax({
 				type : 'POST',
 				cache : false,
-				url : '/search/autoComplete.do',
+				url : '/hamivideo/search/autoComplete.do',
 				async : true,
 				data:{keyword:keyword},
 				success : function(data) {
 					if(data.length>0){
 						var html = '';
 						data.forEach(function(key) {
-							html += '<li onclick="location=\'/search.do?keyword='+encodeURIComponent(key)+'\'">'+key+'</li>';
+							html += '<li onclick="location=\'/hamivideo/search.do?keyword='+encodeURIComponent(key)+'\'">'+key+'</li>';
 						});
 						$('.autocomplete_head ul').html(html);
 						$('.autocomplete_head').show();
@@ -824,14 +1190,16 @@ $(".autocomplete_head.mCustomScrollbar").css("height", $(window).outerHeight() *
         <!--7  -->
         
        	  <div class="list_item swiper-slide">
-   		    <ins class="clickforceads" style="display:inline-block;"
+   		  
+		  <ins class="clickforceads" style="display:inline-block;"
 data-ad-zone-max=12547 data-ad-zone-min=12278
 data-ad-width-max=800 data-ad-height-max=450
 data-ad-width-min=1200 data-ad-height-min=676
 data-ad-changeMinWidth=1024>
 </ins>
-			
-          </div>
+		  
+		  
+        	   		  </div>
         </div>
         <div class="pagination"></div>
         <div class="btn_prev"></div>
@@ -842,11 +1210,11 @@ data-ad-changeMinWidth=1024>
       <h2 style="background-image: url(https://stg.portal.ott.hinet.net/resources/images/icon_.svg);"></h2>
       <ul class="tabSet">
         	<div class="swiper-wrapper">
-        	<li class="swiper-slide "><a href="/奧運專區/直播.do" >直播</a></li>
-        			<li class="swiper-slide active"><a href="/奧運專區/中華隊.do" >中華隊</a></li>
-        			<li class="swiper-slide "><a href="/奧運專區/轉播表.do" >轉播表</a></li>
-        			<li class="swiper-slide "><a href="/奧運專區/賽事影音.do" >賽事影音</a></li>
-        			<li class="swiper-slide "><a href="/奧運專區/奧運VR.do" >奧運VR</a></li>
+        	<li class="swiper-slide "><a href="/hamivideo/奧運專區/直播.do" >直播</a></li>
+        			<li class="swiper-slide active"><a href="/hamivideo/奧運專區/中華隊.do" >中華隊</a></li>
+        			<li class="swiper-slide "><a href="/hamivideo/奧運專區/轉播表.do" >轉播表</a></li>
+        			<li class="swiper-slide "><a href="/hamivideo/奧運專區/賽事影音.do" >賽事影音</a></li>
+        			<li class="swiper-slide "><a href="/hamivideo/奧運專區/奧運VR.do" >奧運VR</a></li>
         			<!-- 活動link --><li class="swiper-slide "><a href="https://hamivideo.hinet.net/olympics.do">訂閱抽</a></li>
         			</div>
         </ul>
@@ -935,9 +1303,9 @@ function filterUrl(input){
 }
 </script><footer>
       <ul>
-        <li><a href="/contract.do">服務條款</a></li>
-        <li><a href="/privacy.do">隱私權保護</a></li>
-        <li><a href="/contact.do">服務電話</a></li>
+        <li><a href="/hamivideo/contract.do">服務條款</a></li>
+        <li><a href="/hamivideo/privacy.do">隱私權保護</a></li>
+        <li><a href="/hamivideo/contact.do">服務電話</a></li>
         <li><a href="https://www.facebook.com/HamiVideo/" target="_blank">Facebook</a></li>
         </ul>
       <p>Copyright&nbsp;&copy;&nbsp;2021&nbsp;CHT Co., Ltd. All Rights Reserved.</p>
@@ -974,7 +1342,7 @@ try {
 		$.ajax({
 			type : 'POST',
 			cache : false,
-			url : '/personal/favoriteList.do',
+			url : '/hamivideo/personal/favoriteList.do',
 			data:{},
 			async : true,
 			success : function(response) {
@@ -1004,7 +1372,7 @@ function setMyFavorite(productId,_action, vodCategory, vodLabel){
 		$.ajax({
 			type : 'POST',
 			cache : false,
-			url : '/personal/setMyFavorite.do',
+			url : '/hamivideo/personal/setMyFavorite.do',
 			data:{
 			'action':action,
 			'productId':productId,
@@ -1665,7 +2033,7 @@ var multiEntrySwiper_7 = new Swiper('.swiper28_7', {
   function checkTWAuthAndRedirect(isTWCheckAPL,isTWCheckMsgAPL,link){//境外管控跳檔板，境內轉連結
 		var isUserAuthOK= '1';//
 		if(isTWCheckAPL=='1'){
-			$.getJSON("/checkAuthByIP.do", {}, function (response) {
+			$.getJSON("/hamivideo/checkAuthByIP.do", {}, function (response) {
 				if(response!==null && response!=""){
 					if(response.returnCode=='1'){//成功
 						isUserAuthOK = response.isAuth;
@@ -1706,7 +2074,7 @@ var multiEntrySwiper_7 = new Swiper('.swiper28_7', {
 		var agent =navigator.userAgent.toUpperCase();
 		
 		if(vodOrLive_Type.toUpperCase().indexOf("VR")>=0){  
-			$.getJSON("/api/play.do", {id: _contentPk,freeProduct:_freeProduct}, function (data) {
+			$.getJSON("/hamivideo/api/play.do", {id: _contentPk,freeProduct:_freeProduct}, function (data) {
 				console.log(JSON.stringify(data));
 				console.log("code:"+data.code);
 				var msg=data.msg;
@@ -1733,11 +2101,11 @@ var multiEntrySwiper_7 = new Swiper('.swiper28_7', {
 		        	alert('登入session已過期，請重新登入');
 				}else if (data.msg == "reinit") {
 					console.log(data.msg);
-					location = '/api/reinit.do?others=74c04dddcf88af4443aedf6672a92f212391748c48e04e3d1e3dca94210e3e500aa228b95ffda0f926c67e685e1ef6f90db71d47104743f62da389aebb8870b06dd050323d69fbfd';
+					location = '/hamivideo/api/reinit.do?others=e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2';
 				}else if (data.msg == "login") {
-					location ='/login.do';
+					location ='/hamivideo/login.do';
 				}else if (data.msg == "buy") {
-					location = '/subscribe.do?others=74c04dddcf88af4443aedf6672a92f212391748c48e04e3d1e3dca94210e3e500aa228b95ffda0f926c67e685e1ef6f90db71d47104743f62da389aebb8870b06dd050323d69fbfd&contentPk='+_contentPk;
+					location = '/hamivideo/subscribe.do?others=e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2&contentPk='+_contentPk;
 				}else{//error message
 					console.log(data.msg);
 					alert(data.msg);
@@ -1749,9 +2117,9 @@ var multiEntrySwiper_7 = new Swiper('.swiper28_7', {
 			});
 		}else{
 			if(_freeProduct==="0" && vodOrLive_Type.toUpperCase().indexOf("VR")>=0){
-				$.getJSON("/api/check.do", {}, function (login) {
+				$.getJSON("/hamivideo/api/check.do", {}, function (login) {
 					if(!login){
-						location = '/api/reinit.do?others=74c04dddcf88af4443aedf6672a92f212391748c48e04e3d1e3dca94210e3e500aa228b95ffda0f926c67e685e1ef6f90db71d47104743f62da389aebb8870b06dd050323d69fbfd';
+						location = '/hamivideo/api/reinit.do?others=e0cd1cea9dc110a6c9fc9c09b91c0235bec004779b7cb737b962973458ac247c9ed953bcfae9ca40ed15469c2208d43b30608c22759e0f6a4a8c6527ebe13dbcf1882814829c1f6a6c580b6879291ff2';
 					}else{
 						location.href=play_url;
 					}
@@ -1769,7 +2137,7 @@ var multiEntrySwiper_7 = new Swiper('.swiper28_7', {
 		}
 	}
 	function checkServerStatus(){
-		$.getJSON("/api/getServerStatus.do", {}, function (response) {
+		$.getJSON("/hamivideo/api/getServerStatus.do", {}, function (response) {
 		    if(response.returnCode==="002"){
 		    	if(response.bk_url.indexOf("http")==0){
 		    		location =response.bk_url;
