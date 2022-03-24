@@ -1,0 +1,47 @@
+<script type="text/javascript">
+function test() {
+     var loadDateTime = new Date();
+    location = "hamivideo://authorize/";
+   
+    setTimeout(function() {
+	    var timeOutDateTime = new Date();
+		if (timeOutDateTime - loadDateTime < 600) {
+			location ="https://www.google.com";
+		}else{
+			 window.close();
+		}
+			
+    }, 500);
+   
+
+
+}
+test();
+</script>
+<!--
+<script language = "javascript" >
+if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+    var loadDateTime = new Date();
+    window.setTimeout(function() {
+            var timeOutDateTime = new Date();
+            if (timeOutDateTime - loadDateTime < 5000) {
+                window.location = "https://www.apple.com";
+            } else {
+                window.close();
+            }
+        },
+        25);
+    window.location = " hamivideo://authorize/";
+} else if (navigator.userAgent.match(/android/i)) {
+    var state = null;
+    try {
+        state = window.open("hamivideo://authorize/", '_blank');
+		console.log("state="+state);
+    } catch (e) {}
+    if (state) {
+        window.close();
+    } else {
+        window.location = "https://www.google.com";
+    }
+}
+</script>-->
