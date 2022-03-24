@@ -1,10 +1,10 @@
 <script type="text/javascript">
 function test() {
      var loadDateTime = new Date();
-    //location = "hamivideo://authorize/";
+     location = "hamivideo://authorize/";
    
-    var state = window.open("hamivideo://authorize/", '_blank');
-	alert(state);
+    //var state = window.open("hamivideo://authorize/", '_blank');
+	//alert(state);
     setTimeout(function() {
 	    var timeOutDateTime = new Date();
 		/*if (timeOutDateTime - loadDateTime < 600) {
@@ -13,12 +13,14 @@ function test() {
 		}else{
 			window.close();
 		}*/
-		if(state==null){
-			location ="https://www.facebook.com";
-		}
-			
+		//if(state==null){
+		//	location ="https://www.facebook.com";
+		//}
+		location ="https://tw.yahoo.com";	
     }, 500);
-   
+    setTimeout(function() {
+		window.close();
+    }, 1000);
 
 
 }
