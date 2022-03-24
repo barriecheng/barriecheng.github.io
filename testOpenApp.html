@@ -1,14 +1,20 @@
 <script type="text/javascript">
 function test() {
      var loadDateTime = new Date();
-    location = "hamivideo://authorize/";
+    //location = "hamivideo://authorize/";
    
+    var state = window.open("hamivideo://authorize/", '_blank');
+	alert(state);
     setTimeout(function() {
 	    var timeOutDateTime = new Date();
-		if (timeOutDateTime - loadDateTime < 5000) {
+		/*if (timeOutDateTime - loadDateTime < 600) {
 			location ="https://tw.yahoo.com";
+			 
 		}else{
-			 window.close();
+			window.close();
+		}*/
+		if(state==null){
+			location ="https://www.facebook.com";
 		}
 			
     }, 500);
