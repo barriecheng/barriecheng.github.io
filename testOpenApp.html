@@ -5,8 +5,8 @@ function test() {
    
     setTimeout(function() {
 	    var timeOutDateTime = new Date();
-		if (timeOutDateTime - loadDateTime < 600) {
-			location ="https://www.google.com";
+		if (timeOutDateTime - loadDateTime < 5000) {
+			location ="https://tw.yahoo.com";
 		}else{
 			 window.close();
 		}
