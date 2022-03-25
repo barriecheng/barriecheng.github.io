@@ -3,13 +3,14 @@
 <head>
 <script type="text/javascript">
 function test() {
-     var loadDateTime = new Date();
+     var t1 = new Date();
      location = "hamivideo://authorize/";
    
     //var state = window.open("hamivideo://authorize/", '_blank');
 	//alert(state);
     setTimeout(function() {
-	    var timeOutDateTime = new Date();
+	   var t2= new Date();
+		alert(t2-t1);
 		/*if (timeOutDateTime - loadDateTime < 600) {
 			location ="https://tw.yahoo.com";
 			 
@@ -19,8 +20,8 @@ function test() {
 		//if(state==null){
 		//	location ="https://www.facebook.com";
 		//}
-		location ="https://www.msn.com/";	
-    }, 500);
+		location ="https://www.facebook.com";	
+    }, 25);
    
 }
 window.onblur = function() {
