@@ -1,4 +1,4 @@
-<script>
+<!--<script>
 
 if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
   document.write('isIOS');
@@ -7,4 +7,19 @@ if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 } else {
    document.write('isPC');
 }
+</script>-->
+<script>
+	location ="hamivideo://";
+	setTimeout(function(){
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			location="https://apps.apple.com/tw/app/hami-video/id879383077";
+		}
+		else if (/(Android)/i.test(navigator.userAgent)) {
+			location="https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+		}
+		else{
+			document.write('isPC');
+		}
+	},500);
+	
 </script>
