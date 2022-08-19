@@ -1,16 +1,20 @@
 <script>
-window.onload = function() {
-location ='hamivideo://' +encodeURIComponent('{"actionType":"4","itemId":"99"}');
-setTimeout(function(){
-	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-		location="https://apps.apple.com/tw/app/hami-video/id879383077";
+	window.onload = function() {
+		location = 'hamivideo://'
+				+ encodeURIComponent('{"actionType":"4","itemId":"99"}');
+		var openTime = new Date();
+
+		setTimeout(
+				function() {
+					if (new Date() - openTime > 500) {
+						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+						} else if (/(Android)/i.test(navigator.userAgent)) {
+							location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+						} else {
+							console.log('isPC');
+						}
+					}
+				}, 500);
 	}
-	else if (/(Android)/i.test(navigator.userAgent)) {
-		location="https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
-	}
-	else{
-		console.log('isPC');
-	}
-},500);
-}
 </script>
