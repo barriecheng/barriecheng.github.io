@@ -1,18 +1,16 @@
-
 <script>
-	//location ='hamivideo://{"actionType":"4","itemId":"99"}';
-	location ='hamivideo://' +encodeURIComponent('{"actionType":"4","itemId":"99"}');
-	//location ='hamivideo://';
-	setTimeout(function(){
-		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-			location="https://apps.apple.com/tw/app/hami-video/id879383077";
-		}
-		else if (/(Android)/i.test(navigator.userAgent)) {
-			location="https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
-		}
-		else{
-			document.write('isPC');
-		}
-	},300);
-	
+window.onload = function() {
+location ='hamivideo://' +encodeURIComponent('{"actionType":"4","itemId":"99"}');
+setTimeout(function(){
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		location="https://apps.apple.com/tw/app/hami-video/id879383077";
+	}
+	else if (/(Android)/i.test(navigator.userAgent)) {
+		location="https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+	}
+	else{
+		console.log('isPC');
+	}
+},300);
+}
 </script>
