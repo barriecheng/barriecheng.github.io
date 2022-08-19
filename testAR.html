@@ -6,7 +6,7 @@
 
 		setTimeout(
 				function() {
-					if (new Date() - openTime > 500) {
+					//if (new Date() - openTime > 500) {
 						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
 						} else if (/(Android)/i.test(navigator.userAgent)) {
@@ -14,7 +14,7 @@
 						} else {
 							console.log('isPC');
 						}
-					}
+					//}
 				}, 1);
 	}
 </script>
