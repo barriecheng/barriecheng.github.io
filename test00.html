@@ -1,7 +1,24 @@
 
-<ins class="clickforceads" style="display: inline-block;"
-	data-ad-zone-max=10428 data-ad-zone-min=10428 data-ad-width-max=800
-	data-ad-height-max=600 data-ad-width-min=320 data-ad-height-min=480
-	data-ad-changeMinWidth=1024></ins>
-
-<script type="text/javascript" src="//cdn.holmesmind.com/js/rwd_cap.js"></script>
+<script>
+	var url = window.location.href;
+	var itemId;
+	if (url.indexOf("https://hamivideo") == 0) {
+		itemId = "705" //production
+	} else {
+		itemId = "618"; //stage
+	}
+	itemId="705";
+	window.onload = function() {
+		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
+		setTimeout(
+				function() {
+					if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+						location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+					} else if (/(Android)/i.test(navigator.userAgent)) {
+						location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+					} else {
+						console.log('isPC');
+					}
+				}, 500);
+	}
+</script>
