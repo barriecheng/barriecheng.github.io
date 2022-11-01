@@ -1,5 +1,11 @@
 <script>
-	var itemId="704";
+	var url = window.location.href;
+	var itemId;
+	if (url.indexOf("https://hamivideo") == 0) {
+		itemId = "705" //production
+	} else {
+		itemId = "618"; //stage
+	}
 	window.onload = function() {
 		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
 		setTimeout(
