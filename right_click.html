@@ -1,0 +1,34 @@
+<script>
+	var url = window.location.href;
+	var itemId;
+	if (url.indexOf("https://hamivideo") == 0) {
+		itemId = "705" //production
+	} else {
+		itemId = "618"; //stage
+	}
+	window.onload = function() {
+		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
+		
+		setTimeout(
+				function() {
+					alert(document.hasFocus());
+					if (document.hasFocus()) {
+						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+						} else if (/(Android)/i.test(navigator.userAgent)) {
+							location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+						} else {
+						console.log('isPC');
+						}
+					}
+				}, 500);
+	}
+	window.onfocus= function(){
+		console.log("onfoucs");
+	}
+	window.onblblur= function(){
+		console.log("onfoucs");
+	}
+	
+	
+</script>
