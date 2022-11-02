@@ -1,27 +1,58 @@
 <script>
-	var url = window.location.href;
-	var itemId;
-	if (url.indexOf("https://hamivideo") == 0) {
-		itemId = "705" //production
-	} else {
-		itemId = "618"; //stage
-	}
-	window.onload = function() {
-		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
-		
-		setTimeout(
-				function() {
-					alert(document.hasFocus());
-					if (document.hasFocus()) {
-						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
-						} else if (/(Android)/i.test(navigator.userAgent)) {
-							location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
-						} else {
-						console.log('isPC');
-						}
-					}
-				}, 500);
-	}
-	
+var itemId = "618";
+var appUrl='hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}'); 
+var webUrl="https://apps.apple.com/tw/app/hami-video/id879383077";
+
+open(appUrl,webUrl);
+
+function openApp(appUrl, webUrl) {
+  // 避免啟動失敗的計時器
+  var timer = window.setTimeout(() => {
+    if (webUrl) {
+      window.location.href = webUrl;
+    }
+  }, 1000);
+
+  // 判斷瀏覽器來區分啟動方式
+  var ifr;
+  if (navigator.userAgent.match(/(Safari)/i)) {
+    if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+      window.clearTimeout(timer);
+      window.location.replace(appUrl);
+    } else if (navigator.userAgent.match(/Mobile/i)) {
+      window.clearTimeout(timer);
+      window.location.replace(appUrl);
+    } else {
+      ifr = document.createElement('iframe');
+
+      ifr.src = appUrl;
+      ifr.style.display = 'none';
+      document.body.appendChild(ifr);
+    }
+  } else if (navigator.userAgent.match(/Chrome/i)) {
+    window.clearTimeout(timer);
+    window.location.replace(appUrl);
+  } else {
+    ifr = document.createElement('iframe');
+
+    ifr.src = appUrl;
+    ifr.style.display = 'none';
+    document.body.appendChild(ifr);
+  }
+
+  // 用 onblur 來確認有沒有多跳一個是否啟動 APP 的確認視窗
+  window.onblur = () => {
+    window.clearTimeout(timer);
+    if (ifr) {
+      ifr.remove();
+    }
+    window.close();
+  };
+
+  window.setTimeout(() => {
+    if (ifr) {
+      ifr.remove();
+    }
+  }, 10000);
+}
 </script>
