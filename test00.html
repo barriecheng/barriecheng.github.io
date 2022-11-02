@@ -8,9 +8,10 @@
 	}
 	window.onload = function() {
 		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
-		alert("test");
+		
 		setTimeout(
 				function() {
+					alert(document.hasFocus());
 					if (document.hasFocus()) {
 						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
