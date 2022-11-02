@@ -9,7 +9,7 @@
 	}
 	itemId="705";
 	window.onload = function() {
-		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
+		document.getElementById('loader').src = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
 		setTimeout(
 				function() {
 					if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
@@ -19,6 +19,7 @@
 					} else {
 						console.log('isPC');
 					}
-				}, 500);
+				}, 1);
 	}
 </script>
+<iframe style="display:none" height="0" width="0" id="loader"></iframe>
