@@ -1,4 +1,3 @@
-
 <script>
 	var url = window.location.href;
 	var itemId;
@@ -7,19 +6,20 @@
 	} else {
 		itemId = "618"; //stage
 	}
-	itemId="705";
 	window.onload = function() {
-		document.getElementById('loader').src = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
+		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
+		
 		setTimeout(
 				function() {
-					if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-						location = "https://apps.apple.com/tw/app/hami-video/id879383077";
-					} else if (/(Android)/i.test(navigator.userAgent)) {
-						location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
-					} else {
+					if (document.hasFocus()) {
+						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+						} else if (/(Android)/i.test(navigator.userAgent)) {
+							location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+						} else {
 						console.log('isPC');
+						}
 					}
-				}, 100);
+				}, 500);
 	}
 </script>
-<iframe style="display:none" height="0" width="0" id="loader"></iframe>
