@@ -1,66 +1,33 @@
 <script>
-    var app="";
-    if(app=="") app="ar";
-	window.onload = function() {
-		const data='[{"app":"ar","app_schema":"arisewc22://broadcast/elta/","ios_url":"https://www.apple.com/app-store/app/","android_url":"https://play.google.com/store/apps/"}]';
-		var arr =JSON.parse(data);	
-		for(var i=0;i<arr.length;i++){
-			
-			if(arr[i].app==app){
-				openApp(arr[i].app_schema, arr[i].ios_url , arr[i].android_url);
-				break;
-			}
-		}
-		
-		
+	var url = window.location.href;
+	var itemId;
+	if (url.indexOf("https://hamivideo") == 0) {
+		itemId = "705" //production
+	} else {
+		itemId = "618"; //stage
 	}
-
-	function openApp(schema, ios_url, android_url) {
-		location = schema;
-		setTimeout(function() {
-			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-				location = ios_url;
-			} else if (/(Android)/i.test(navigator.userAgent)) {
-				location = android_url;
-			} else {
-				console.log('isPC');
-			}
-		}, 500);
-	}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<script>
+	var isBlur=false;
 	window.onload = function() {
-		location = 'hamivideo://'
-				+ encodeURIComponent('{"actionType":"4","itemId":"99"}');
-		var openTime = new Date();
-
+	
+	
+		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
 		setTimeout(
 				function() {
-					//if (new Date() - openTime > 500) {
+					if(!isBlur){
+				
 						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 							location = "https://apps.apple.com/tw/app/hami-video/id879383077";
-						} else if (/(Android)/i.test(navigator.userAgent)) {
+							} else if (/(Android)/i.test(navigator.userAgent)) {
 							location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
-						} else {
+							} else {
 							console.log('isPC');
 						}
-					//}
-				}, 1);
+					}
+				}, 500);
 	}
-</script>-->
+	
+	window.onblur=function (){
+	    isBlur=true;
+		console.log("onblur");
+	}
+</script>
