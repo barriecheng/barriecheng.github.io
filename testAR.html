@@ -7,6 +7,7 @@
 		itemId = "618"; //stage
 	}
 	var isBlur=false;
+	var isFocus=false;
 	window.onload = function() {
 	
 	
@@ -14,6 +15,7 @@
 		setTimeout(
 				function() {
 					document.write("isBlur="+isBlur);
+					document.write("isFocus="+isFocus);
 					if(!isBlur){
 				
 						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
@@ -32,5 +34,6 @@
 		console.log("onblur");
 	}
 	window.onfocus=function(){
+		isFocus=true;
 	}
 </script>
