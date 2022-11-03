@@ -13,6 +13,7 @@
 		location = 'hamivideo://'+ encodeURIComponent('{"actionType":"4","itemId":"' + itemId + '"}');
 		setTimeout(
 				function() {
+					document.write("isBlur="+isBlur);
 					if(!isBlur){
 				
 						if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
@@ -29,5 +30,7 @@
 	window.onblur=function (){
 	    isBlur=true;
 		console.log("onblur");
+	}
+	window.onfocus=function(){
 	}
 </script>
