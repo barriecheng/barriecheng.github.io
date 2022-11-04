@@ -20,7 +20,7 @@
 	function openApp(schema, ios_url, android_url) {
 		location = schema;
 		setTimeout(function() {
-			if(confirm("要下載嗎?")==true){
+			if(confirm("要開啟或下載?")==true){
 				if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 					location = ios_url;
 				} else if (/(Android)/i.test(navigator.userAgent)) {
