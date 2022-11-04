@@ -20,19 +20,34 @@
 	function openApp(schema, ios_url, android_url) {
 		location = schema;
 		setTimeout(function() {
-			setTimeout( 
-				function(){
 					if(confirm("要開啟或下載AR APP?")==true){
 					    goDownload();
 					}
 				
 				},500);
-		}
 	}
 	function goDownload(){
-		
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+		} else if (/(Android)/i.test(navigator.userAgent)) {
+			location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+		} else {
+			console.log('isPC');
+		}
 	}	
 </script>
+<style>
+.downloadBlock{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    line-height: 250px;
+    height: 250px;
+     font-size: 20px;
+    
+}
+</style>
 <div class="downloadBlock">
 	<a href="javascript:void(0)" onclick="goDownload();">開啟或下載HamiVideo APP</a>
 </div>
