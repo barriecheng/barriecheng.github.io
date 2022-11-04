@@ -20,7 +20,9 @@
 	function openApp(schema, ios_url, android_url) {
 		location = schema;
 		setTimeout(function() {
+			alert("可以下載");
 			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+				
 				location = ios_url;
 			} else if (/(Android)/i.test(navigator.userAgent)) {
 				location = android_url;
