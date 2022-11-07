@@ -18,13 +18,13 @@
 	}
 	var url="";
 	function openApp(schema, ios_url, android_url) {
-		location = schema;
-		setTimeout(function() {
-					if(confirm("要開啟或下載AR APP?")==true){
+		//location = schema;
+		//setTimeout(function() {
+					if(confirm("要開啟或下載APP?")==true){
 					    goDownload();
 					}
 				
-				},500);
+	//			},500);
 	}
 	function goDownload(){
 		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
