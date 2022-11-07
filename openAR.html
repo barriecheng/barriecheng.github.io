@@ -16,21 +16,13 @@
 		
 		
 	}
-
+	var url="";
 	function openApp(schema, ios_url, android_url) {
 		location = schema;
 		setTimeout(function() {
-			if(confirm("要開啟或下載?")==true){
-				if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-					location = ios_url;
-				} else if (/(Android)/i.test(navigator.userAgent)) {
-					location = android_url;
-				} else {
-					console.log('isPC');
-				}
-			}
-		}, 500);
+			
+				location = "openAR2.html";
+				
+		},500);
 	}
 </script>
-
-
