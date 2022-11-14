@@ -1,0 +1,46 @@
+<script>
+if ( 'speechSynthesis' in window ) {
+  var to_speak = new SpeechSynthesisUtterance('Hello world!');
+  
+  to_speak.rate = 1.4;
+  window.speechSynthesis.speak(to_speak);
+	  
+  console.log(to_speak);
+}
+</script>
+<!--
+<html>
+<script>
+var notice = document.createElement('p');
+
+if ( 'speechSynthesis' in window )
+{
+  var to_speak = new SpeechSynthesisUtterance('Hello world!');
+  to_speak.volume=5;
+  to_speak.rate =1;
+  to_speak.lang ="Zh";
+  console.log(to_speak);
+  window.speechSynthesis.speak(to_speak);
+  //notice.innerText = 'Turn up the volume to hear the browser say “hello world”.';
+  //alert("a");
+}
+else
+{
+  notice.innerText = 'Unfortunately your browser doesn’t support this feature.';
+   alert("no");
+}
+
+//document.body.appendChild( notice );
+</script>
+<style>
+body {
+  padding: 0 1em;
+}
+</style>
+<body>
+<h1>Experimenting with <code>speechSynthesis</code></h1>
+
+<p>This is a simple <code>speechSynthesis</code> example.</p>
+</body>
+</html>
+-->
