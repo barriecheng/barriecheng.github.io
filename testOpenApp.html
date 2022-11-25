@@ -1,66 +1,20 @@
-<!doctype html>
-<html>
-<head>
-<script type="text/javascript">
-function test() {
-     var t1 = new Date();
-     location = "hamivideo://authorize/";
-   
-    //var state = window.open("hamivideo://authorize/", '_blank');
-	//alert(state);
-    setTimeout(function() {
-	   var t2= new Date();
-		alert(t2-t1);
-		/*if (timeOutDateTime - loadDateTime < 600) {
-			location ="https://tw.yahoo.com";
-			 
-		}else{
-			window.close();
-		}*/
-		//if(state==null){
-		//	location ="https://www.facebook.com";
-		//}
-		location ="https://www.facebook.com";	
-    }, 25);
-   
-}
-window.onblur = function() {
-	window.close();
-};
-window.onunload = function() {
-	window.close();
-};
-test();
-</script>
 <script>
-//testApp("hamivideo://authorize/");
+	
+function test1(){
+	alert(navigator.userAgent);
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			alert("iPhone|iPad|iPod|iOS")
+	} else if (/(Android)/i.test(navigator.userAgent)) {
+			alert("Android")
+	} else {
+			alert("非ios, android");
+	}
+}
 
-function testApp(url) {
-    var timeout, t = 1000, hasApp = true;
-    setTimeout(function () {
-        if (hasApp) {
-            alert('安裝了app');
-        } else {
-            alert('未安裝app');
-        }
-        document.removeChild(ifr);
-    }, 2000)
- 
-    var t1 = Date.now();alert("a");
-    var ifr = document.createElement("iframe");
-    ifr.setAttribute('src', url);
-    ifr.setAttribute('style', 'display:none');
-    document.appendChild(ifr);
-    timeout = setTimeout(function () {
-         var t2 = Date.now();
-         if (!t1 || t2 - t1 < t + 100) {
-             hasApp = false;
-         }
-    }, t);
+function test2(){
 }
 </script>
-</head>
-<body>
 
-</body>
-</html>
+
+<input type="button" value="test1" onclick="test1()"></input>
+
