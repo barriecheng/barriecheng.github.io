@@ -1,0 +1,42 @@
+<script type="text/javascript" src="https://static-hamivideo.cdn.hinet.net/resources/js/jquery-3.5.1.min.js"></script>
+
+<script>
+function speech(){
+	try {
+		$.ajax({
+			type : 'POST',
+			data :{},
+			cache : false,
+			url : 'https://stg.portal.ott.hinet.net/speech_captcha.do',
+			async : true,
+			dataType: "text",
+			success : function(response) {
+				if(response!==""){
+					audio(response);
+				}else{
+					
+				}
+			},error: function( jqXHR, textStatus, errorThrown ){
+				console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
+			},
+			beforeSend: function( jqXHR, settings ){
+				//loadingToggle(needOverLay);
+			},
+			complete: function( jqXHR, textStatus ){
+				//loadingToggle(needOverLay);
+			}
+	      });
+	      }catch (err) {
+		      alert(err);
+	      }
+}
+
+function audio(word){
+	var to_speak = new SpeechSynthesisUtterance(word);
+	to_speak.rate = 0.7;
+	window.speechSynthesis.speak(to_speak);
+}
+
+</script>
+
+<input type="button" value="播放" onclick="speech()">
