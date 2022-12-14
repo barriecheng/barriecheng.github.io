@@ -12,6 +12,7 @@ function speech(){
 			dataType: "text",
 			success : function(response) {
 				if(response!==""){
+					alert(response);
 					audio(response);
 				}else{
 					alert("no response");	
