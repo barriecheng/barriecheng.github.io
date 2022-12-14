@@ -7,7 +7,7 @@ function speech(){
 			type : 'POST',
 			data :{},
 			cache : false,
-			url : 'https://stg.portal.ott.hinet.net/speech_captcha.do',
+			url : 'speech_captcha.html',
 			async : true,
 			dataType: "text",
 			success : function(response) {
@@ -31,12 +31,22 @@ function speech(){
 	      }
 }
 
+
+
+function test(){
+	console.log("testing");
+	document.addEventListener('click', audio("abc"));
+}
 function audio(word){
 	var to_speak = new SpeechSynthesisUtterance(word);
+	console.log(to_speak);
 	to_speak.rate = 0.7;
 	window.speechSynthesis.speak(to_speak);
+	console.log("audio");
 }
 
+//setTimeout(test, 2000);
 </script>
-
-<input type="button" value="播放" onclick="speech()">
+<a href="javascript:void(0)" class="reload_captcha" onclick="speech()">語音播放</a>
+<!--<input type="button" value="播放" onclick="test()">
+<body onload="test()">-->
