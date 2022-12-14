@@ -14,13 +14,15 @@ function speech(){
 				if(response!==""){
 					audio(response);
 				}else{
-					
+					alert("no response");	
 				}
 			},error: function( jqXHR, textStatus, errorThrown ){
 				console.log(jqXHR+'/'+textStatus+'/'+errorThrown);
+				alert(jqXHR+'/'+textStatus+'/'+errorThrown)
 			},
 			beforeSend: function( jqXHR, settings ){
 				//loadingToggle(needOverLay);
+				
 			},
 			complete: function( jqXHR, textStatus ){
 				//loadingToggle(needOverLay);
