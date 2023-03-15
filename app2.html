@@ -1,0 +1,52 @@
+
+<html>
+<head>
+<script>
+	window.onload = function() {
+		//if(confirm("開啟或下載HamiVideo APP?")==true){
+			goDownload();
+		//}
+	}
+	function goDownload(){
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			location = "https://apps.apple.com/tw/app/hami-video/id879383077";
+		} else if (/(Android)/i.test(navigator.userAgent)) {
+			location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer";
+		} else {
+			console.log('isPC');
+		}
+	}
+</script>
+<style>
+.downloadBlock{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  	padding-top:250px;
+    font-size: 25px;
+    line-height: 35px;
+    padding-top:250px;
+
+    
+}
+.downloadButton{
+	border: 1px solid white;
+	border-radius:30px;
+	padding : 1px 20px 1px 20px;
+	display: inline-block;
+	width:100px;
+	margin-top:10px;
+}
+</style>
+</head>
+<body>
+<div class="downloadBlock">
+	<div>下載HamiVideo APP</div>
+	<div>
+	<a href="https://apps.apple.com/tw/app/hami-video/id879383077" class="downloadButton">iOS</a>    
+	<a href="https://play.google.com/store/apps/details?id=com.cht.ottPlayer" class="downloadButton">Android</a>
+	</div>
+</div>
+</body>
+</html>
