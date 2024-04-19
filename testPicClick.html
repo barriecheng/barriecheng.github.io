@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>點擊圖片獲取位置</title>
+</head>
+
+<body>
+點擊圖片獲取位置  <span id="pointer"> </span>
+<br>
+    <img id="myImage" src="https://apl-hamivideo.cdn.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=sourceImages@4069100003_o_20240316001540.jpg" alt="Your Image" style="width:300px">
+   
+</body>
+
+
+  <script>
+        document.getElementById('myImage').addEventListener('click', function(event) {
+            var x = event.clientX; // 鼠標相對於瀏覽器窗口左上角的水平坐標
+            var y = event.clientY; // 鼠標相對於瀏覽器窗口左上角的垂直坐標
+            console.log('點擊位置:', x, y);
+			document.getElementById("pointer").innerText= '點擊位置:'+x + " " +y;
+        });
+    </script>
+</html>
