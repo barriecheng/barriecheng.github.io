@@ -1,11 +1,20 @@
 <script>
 
-
+function isFacebookApp() {
+	  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	  let isFB =  (userAgent.indexOf("FBAN") > -1) || 
+	  			  (userAgent.indexOf("FBAV") > -1) ||
+	  			  (userAgent.indexOf("FB_IAB") > -1) ||
+	  			  (userAgent.indexOf("FBIOS") > -1) ||
+	  			  (userAgent.indexOf("FB4A") > -1);
+	  return isFB;
+}
 
 
   window.onload=function(){
     document.write(navigator.userAgent);
     alert(navigator.userAgent);
+    alert(isFacebookApp());
   }
 </script>
 
