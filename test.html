@@ -1,5 +1,20 @@
 <script>
 
 document.write(navigator.userAgent);
+document.write("<br>");
+document.write("navigator.userAgent.match(/Android/i):"+navigator.userAgent.match(/Android/i));
+document.write("<br>");
+if (navigator.userAgent.match(/Android/i)) {
+	document.write("it's android");
+}
+document.write("<br>");
+
+document.write("navigator.userAgent.match(/(iPhone|iPad|iPod)/i)"+navigator.userAgent.match(/(iPhone|iPad|iPod)/i));
+document.write("<br>");
+if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+	document.write("it's ios");
+}
+
+
+
 </script>
-<a href="https://hamivideo.hinet.net/index.do?&openExternalBrowser=1">testing</a>
