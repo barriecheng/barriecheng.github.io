@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<div class="container">
+    <div class="left">
+        <img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="大图描述" id="bigImage">
+    </div>
+    <div class="right">
+        <div class="row">
+            <img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+            <img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+            <img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+            <img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+	    </div>
+		<div class="row">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+			<img src="https://stg.apl.ott.hinet.net/HamiVideo/getHamiVideoImg.php?imageId=OTTVOD_0000082025.jpg" alt="小图描述">
+        </div>
+    </div>
+</div>
+
+
+<script>
+console.log(Math.random() );
+console.log( eval("Math.random()") );
+</script>
+<style>
+.container {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+</style>
+<script>
+// 获取右侧两行小图的高度
+var rightDiv = document.querySelector('.right');
+var rightRowsHeight = rightDiv.offsetHeight;
+
+// 将右侧两行小图的高度应用到左侧大图上
+var bigImage = document.getElementById('bigImage');
+bigImage.style.height = rightRowsHeight + 'px';
+
+
+var s= "1234567890@email.com";
+console.log(s);
+console.log(btoa(s));
+console.log(atob(btoa(s)));
+</script>
+</html>
