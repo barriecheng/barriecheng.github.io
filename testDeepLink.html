@@ -1,0 +1,53 @@
+
+<html lang="zh-Hant-TW"><head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+window.onload = function() {
+
+	var scheme_link = "hamivideo://%7B%22actionType%22%3A%223%22%2C%22itemId%22%3A%22289883%22%2C%22vodType%22%3A%22%22%2C%22categoryStyle%22%3A%222%22%7D";
+	var download_link;
+	location = scheme_link;
+	var openTime = +new Date();
+	//setTimeout(function() {
+		//if((+new Date()) - openTime > 500){
+			var download = false;
+			if (navigator.userAgent.match(/Android/i)) {
+				//Android
+				download_link = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer&hl=zh_TW";
+				if (navigator.userAgent.match(/Chrome/i)) {
+					if (!document.webkitHidden) {
+							
+					}
+					location = download_link;
+					download = true;
+				} else {
+					var iframe = document.createElement("iframe");
+					iframe.style.border = "none";
+					iframe.style.width = "1px";
+					iframe.style.height = "1px";
+					location = download_link;
+					iframe.onload = function() {
+						clearTimeout(t);
+					};
+					iframe.src = scheme_link;
+					document.body.appendChild(iframe);
+				}
+			} else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+				download = true;
+			}
+			if(!download){
+				window.history.back();
+			}
+		}
+	//}, 500);
+
+}
+</script>
+
+<br>
+<br>download Hami Video APP from App store <a href="https://apps.apple.com/tw/app/id879383077" target="" title="App Store download APP">download link</a>
+
+
+<script src="https://www.drv.tw/inc/wd.js?s=la6fhgkznk2xwu3z8vhz0q"></script></body></html>
