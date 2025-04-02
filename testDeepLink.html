@@ -1,17 +1,12 @@
-
-<html lang="zh-Hant-TW"><head>
-    <meta charset="utf-8" />
-</head>
-<body>
 <script type="text/javascript">
 window.onload = function() {
 
-	var scheme_link = "hamivideo://%7B%22actionType%22%3A%223%22%2C%22itemId%22%3A%22289883%22%2C%22vodType%22%3A%22%22%2C%22categoryStyle%22%3A%222%22%7D";
+	var scheme_link = "hamivideo://%7B%22actionType%22%3A%222%22%2C%22itemId%22%3A%22286760%22%2C%22vodType%22%3A%22%22%2C%22categoryStyle%22%3A%222%22%7D";
 	var download_link;
 	location = scheme_link;
 	var openTime = +new Date();
-	//setTimeout(function() {
-		//if((+new Date()) - openTime > 500){
+	setTimeout(function() {
+		/*if((+new Date()) - openTime > 500){
 			var download = false;
 			if (navigator.userAgent.match(/Android/i)) {
 				//Android
@@ -35,19 +30,19 @@ window.onload = function() {
 					document.body.appendChild(iframe);
 				}
 			} else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+				//iOS
+				download_link = "https://itunes.apple.com/tw/app/zhong-hua-ying-shi/id879383077?l=zh";
+				if (!document.webkitHidden) {
+				}
+				location = download_link;
 				download = true;
 			}
 			if(!download){
 				window.history.back();
 			}
-		}
-	//}, 500);
+		}*/
+		location ="https://hamivideo.hinet.net/app/openHamiVideoApp2.do";
+	}, 500);
 
 }
 </script>
-
-<br>
-<br>download Hami Video APP from App store <a href="https://apps.apple.com/tw/app/id879383077" target="" title="App Store download APP">download link</a>
-
-
-<script src="https://www.drv.tw/inc/wd.js?s=la6fhgkznk2xwu3z8vhz0q"></script></body></html>
