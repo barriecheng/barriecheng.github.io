@@ -13,7 +13,7 @@
     "tv": "https://chat.cht.com.tw/?b=FixedLine&s=hamivideo&f=IPTV"
   },
     "watermark": {
-    "enable": "0",
+    "enable": "1",
     "pollingDuration": "60",
     "showDuration": "10",
     "idLength": "10",
