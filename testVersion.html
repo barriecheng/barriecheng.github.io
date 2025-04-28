@@ -1,0 +1,51 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+function getBrowserInfo() {
+    const userAgent = navigator.userAgent;
+    const browserList = [
+        { name: 'Chrome', regex: /Chrome\/(\d+)/ },
+        { name: 'Firefox', regex: /Firefox\/(\d+)/ },
+        { name: 'Safari', regex: /Version\/(\d+).*Safari/ },
+        { name: 'Edge', regex: /Edge\/(\d+)/ }
+    ];
+
+    for (const browser of browserList) {
+        const match = userAgent.match(browser.regex);
+        if (match) {
+            return {
+                name: browser.name,
+                version: match[1]
+            };
+        }
+    }
+}
+
+const browserInfo = getBrowserInfo();
+console.log(`瀏覽器：${browserInfo.name}`);
+console.log(`版本號碼：${browserInfo.version}`);
+
+
+
+
+
+
+function supportsHEVC() {
+    var v = document.createElement('video');
+    if (typeof v.canPlayType === 'function') {
+        // 檢查 MIME type 和 codec
+        var isSupported = v.canPlayType('video/mp4; codecs="hev1.1.6.L93.B0"') || 
+                          v.canPlayType('video/mp4; codecs="hvc1.1.6.L93.B0"');
+        return isSupported === 'probably' || isSupported === 'maybe';
+    }
+    return false;
+}
+
+// 用 jQuery 等頁面載完後檢查
+$(document).ready(function() {
+    if (supportsHEVC()) {
+        console.log("瀏覽器支援 HEVC");
+    } else {
+        console.log("瀏覽器不支援 HEVC");
+    }
+});
+</script>
