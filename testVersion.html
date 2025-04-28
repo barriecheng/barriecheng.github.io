@@ -44,8 +44,10 @@ function supportsHEVC() {
 $(document).ready(function() {
     if (supportsHEVC()) {
         console.log("瀏覽器支援 HEVC");
+        document.write("瀏覽器支援 HEVC");
     } else {
         console.log("瀏覽器不支援 HEVC");
+        document.write("瀏覽器不支援 HEVC");
     }
 });
 </script>
