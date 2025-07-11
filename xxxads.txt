@@ -1,8 +1,0 @@
-#20240305
-#127.0.0.1_test
-
-google.com, pub-1740840196959600, DIRECT, f08c47fec0942fa0
-google.com, pub-1311151640559524, DIRECT, f08c47fec0942fa0
-google.com, pub-3475294339340860, DIRECT, f08c47fec0942fa0
-google.com, pub-4480984600091554, DIRECT, f08c47fec0942fa0
-google.com, pub-2977875281338330, DIRECT, f08c47fec0942fa0
