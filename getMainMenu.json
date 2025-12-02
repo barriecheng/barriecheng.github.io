@@ -1,0 +1,1379 @@
+{
+	"returnCode": "1",
+	"returnMessage": "success",
+	"gameMenuPeriod": "2025-12-02 09:30:00~2026-03-24 09:30:00",
+	"about": "2025-12-02 13:20:08|stg|getMainMenu_+31_1202132008.json||idTmps.len=116",
+	"cacheTime": "120",
+	"filterTagRDProductIdV2": "23126,847,4973,4974",
+	"filterTagRDImgV2": "_01ticket",
+	"allProductIds": "10437,3159,113167,125155,125158,23126,847,4973,4974,115440,115435,115436,115437,115438,115439,116777,116778,116779,116780,142539,117113,116138",
+	"vipAllProductIds": "3159,4973,4974,10437,18759,23126,29873,113167,115435,115436,115437,115438,115439,115440,116488,116523,116777,126571",
+	"hamiProductIDs": [
+		{
+			"pname": "celeb",
+			"pid": "142539,113167",
+			"isVipProduct": "1"
+		},
+		{
+			"pname": "CPBL",
+			"pid": "117113,115435,115436,115437,115438,115439,115440",
+			"isVipProduct": "1"
+		},
+		{
+			"pname": "AsiaHits",
+			"pid": "116138",
+			"isVipProduct": "0"
+		}
+	],
+	"salePlanStartTime": "1734402600",
+	"salePlanEndTime": "1734406200",
+	"salePlanPeriod": "2024-12-17 10:30:00~2024-12-17 11:30:00",
+	"menuInfo": [
+		{
+			"id": "HamiVideo",
+			"name": "真心推薦",
+			"menuId": "139",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "1",
+			"categoryInfo": [],
+			"menuIcon": {
+				"tab": "ic_logo_home.svg",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "電視",
+			"name": "電視運動館",
+			"menuId": "99",
+			"isChild": "",
+			"productId": "10437",
+			"isVipProduct": "1",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "4",
+			"categoryInfo": [
+				{
+					"name": "全部",
+					"menuId": "162",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "運動",
+					"menuId": "132",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "新聞",
+					"menuId": "143",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "綜合",
+					"menuId": "137",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "影劇",
+					"menuId": "118",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "知性",
+					"menuId": "110",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "綜藝",
+					"menuId": "124",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "兒少",
+					"menuId": "259",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "音樂",
+					"menuId": "262",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "免費",
+					"menuId": "35",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				}
+			],
+			"menuIcon": {
+				"tab": "ic_logo_tvsport.svg",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "影劇",
+			"name": "影劇館⁺",
+			"menuId": "3",
+			"isChild": "",
+			"productId": "23126,847,4973,4974,116777,116778,116779,116780",
+			"isVipProduct": "1",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "3",
+			"categoryInfo": [
+				{
+					"name": "最新",
+					"menuId": "163",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "電影",
+					"menuId": "30",
+					"isChild": "",
+					"productId": "23126,847,4973,4974,116777",
+					"isVipProduct": "1",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": [
+						{
+							"name": "推薦",
+							"menuId": "171",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "0",
+							"filterInfo": [
+								"",
+								"",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "劇情",
+							"menuId": "65",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "動作",
+							"menuId": "66",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "愛情",
+							"menuId": "70",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "喜劇",
+							"menuId": "68",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "驚悚",
+							"menuId": "72",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "科幻",
+							"menuId": "71",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "家庭",
+							"menuId": "69",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "動畫",
+							"menuId": "67",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "紀錄片",
+							"menuId": "77",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "藝術情慾",
+							"menuId": "88",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "1",
+							"warningInfo": {
+								"title": "本目錄為情慾目錄",
+								"description": "本內容涉及倫理、情色等情節議題，未滿十八歲者不宜觀看，是否繼續瀏覽？"
+							},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						}
+					]
+				},
+				{
+					"name": "戲劇",
+					"menuId": "13",
+					"isChild": "",
+					"productId": "23126,847,4973,4974,116778",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": [
+						{
+							"name": "推薦",
+							"menuId": "166",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "0",
+							"filterInfo": [
+								"",
+								"",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "韓綜",
+							"menuId": "383",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "韓劇",
+							"menuId": "63",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "台劇",
+							"menuId": "274",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "陸劇",
+							"menuId": "276",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "日劇",
+							"menuId": "167",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "港劇",
+							"menuId": "169",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						}
+					]
+				},
+				{
+					"name": "動漫",
+					"menuId": "12",
+					"isChild": "",
+					"productId": "23126,847,4973,4974,116779",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": [
+						{
+							"name": "推薦",
+							"menuId": "172",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "0",
+							"filterInfo": [
+								"",
+								"",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "推理懸疑",
+							"menuId": "284",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "熱血動作",
+							"menuId": "173",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "魔幻冒險",
+							"menuId": "86",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "科技未來",
+							"menuId": "174",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "運動競技",
+							"menuId": "175",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "輕鬆幽默",
+							"menuId": "176",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "青春浪漫",
+							"menuId": "177",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "綜合其他",
+							"menuId": "178",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "音樂偶像",
+							"menuId": "234",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						}
+					]
+				},
+				{
+					"name": "兒童",
+					"menuId": "11",
+					"isChild": "1",
+					"productId": "23126,847,4973,4974,116779",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": [
+						{
+							"name": "推薦",
+							"menuId": "179",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "0",
+							"filterInfo": [
+								"",
+								"",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "卡通明星",
+							"menuId": "180",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "學齡幼兒",
+							"menuId": "181",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "精選兒童",
+							"menuId": "182",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "兒少卡通",
+							"menuId": "183",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "特攝英雄",
+							"menuId": "188",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "兒童節目",
+							"menuId": "85",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "交通工具",
+							"menuId": "184",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						}
+					]
+				},
+				{
+					"name": "綜合",
+					"menuId": "638",
+					"isChild": "",
+					"productId": "23126,847,4973,4974,116780",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": [
+						{
+							"name": "推薦",
+							"menuId": "637",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "0",
+							"filterInfo": [
+								"",
+								"",
+								""
+							],
+							"categoryInfo": []
+						},
+						{
+							"name": "精選",
+							"menuId": "740",
+							"isChild": "",
+							"productId": "",
+							"isVipProduct": "0",
+							"isLust": "0",
+							"warningInfo": {},
+							"filter": "1",
+							"filterInfo": [
+								"new",
+								"popular",
+								"score"
+							],
+							"categoryInfo": []
+						}
+					]
+				}
+			],
+			"menuIcon": {
+				"tab": "ic_logo_video.svg",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "運動",
+			"name": "運動館",
+			"menuId": "128",
+			"isChild": "",
+			"productId": "3159",
+			"isVipProduct": "1",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "5",
+			"categoryInfo": [],
+			"menuIcon": {
+				"tab": "ic_logo_sport.svg",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "單次付費",
+			"name": "單次付費",
+			"menuId": "8",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "2",
+			"categoryInfo": [
+				{
+					"name": "最新",
+					"menuId": "164",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "劇情",
+					"menuId": "41",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "動作",
+					"menuId": "42",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "愛情",
+					"menuId": "46",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "喜劇",
+					"menuId": "44",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "驚悚",
+					"menuId": "48",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "動畫",
+					"menuId": "43",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "動漫",
+					"menuId": "543",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "1",
+					"filterInfo": [
+						"new",
+						"popular",
+						"score"
+					],
+					"categoryInfo": []
+				}
+			],
+			"menuIcon": {
+				"tab": "ic_logo_rental.svg",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "WBC經典賽",
+			"name": "WBC經典賽",
+			"menuId": "635",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "",
+			"categoryInfo": [
+				{
+					"name": "直播",
+					"menuId": "632",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "轉播表",
+					"menuId": "633",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "賽事影音",
+					"menuId": "634",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				}
+			],
+			"menuIcon": {
+				"tab": "",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		}
+	],
+	"eventMenuInfo": [
+		{
+			"id": "VR館",
+			"name": "VR館",
+			"menuId": "548",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "",
+			"categoryInfo": [
+				{
+					"name": "推薦",
+					"menuId": "578",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "影劇",
+					"menuId": "552",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "運動",
+					"menuId": "553",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "娛樂",
+					"menuId": "551",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "動畫",
+					"menuId": "550",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				}
+			],
+			"menuIcon": {
+				"tab": "",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "HBLTV熱賽全包",
+			"name": "HBLTV熱賽全包",
+			"menuId": "684",
+			"isChild": "",
+			"productId": "3159,10437,125155,125158",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "",
+			"categoryInfo": [
+				{
+					"name": "直播",
+					"menuId": "685",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "LIVE轉播表",
+					"menuId": "686",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "賽事影音",
+					"menuId": "687",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				}
+			],
+			"menuIcon": {
+				"tab": "",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "The Outlaw Doctor",
+			"name": "The Outlaw Doctor",
+			"menuId": "731",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "",
+			"categoryInfo": [],
+			"menuIcon": {
+				"tab": "",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		}
+	]
+}
