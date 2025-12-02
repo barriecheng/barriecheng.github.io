@@ -1121,73 +1121,6 @@
 				"tabSub": "",
 				"tabSubSelect": ""
 			}
-		},
-		{
-			"id": "WBC經典賽",
-			"name": "WBC經典賽",
-			"menuId": "635",
-			"isChild": "",
-			"productId": "",
-			"isVipProduct": "0",
-			"isLust": "0",
-			"warningInfo": {},
-			"displaySequence": "",
-			"categoryInfo": [
-				{
-					"name": "直播",
-					"menuId": "632",
-					"isChild": "",
-					"productId": "",
-					"isVipProduct": "0",
-					"isLust": "0",
-					"warningInfo": {},
-					"filter": "0",
-					"filterInfo": [
-						"",
-						"",
-						""
-					],
-					"categoryInfo": []
-				},
-				{
-					"name": "轉播表",
-					"menuId": "633",
-					"isChild": "",
-					"productId": "",
-					"isVipProduct": "0",
-					"isLust": "0",
-					"warningInfo": {},
-					"filter": "0",
-					"filterInfo": [
-						"",
-						"",
-						""
-					],
-					"categoryInfo": []
-				},
-				{
-					"name": "賽事影音",
-					"menuId": "634",
-					"isChild": "",
-					"productId": "",
-					"isVipProduct": "0",
-					"isLust": "0",
-					"warningInfo": {},
-					"filter": "0",
-					"filterInfo": [
-						"",
-						"",
-						""
-					],
-					"categoryInfo": []
-				}
-			],
-			"menuIcon": {
-				"tab": "",
-				"tabSelect": "",
-				"tabSub": "",
-				"tabSubSelect": ""
-			}
 		}
 	],
 	"eventMenuInfo": [
@@ -1368,6 +1301,73 @@
 			"warningInfo": {},
 			"displaySequence": "",
 			"categoryInfo": [],
+			"menuIcon": {
+				"tab": "",
+				"tabSelect": "",
+				"tabSub": "",
+				"tabSubSelect": ""
+			}
+		},
+		{
+			"id": "WBC經典賽",
+			"name": "WBC經典賽",
+			"menuId": "635",
+			"isChild": "",
+			"productId": "",
+			"isVipProduct": "0",
+			"isLust": "0",
+			"warningInfo": {},
+			"displaySequence": "",
+			"categoryInfo": [
+				{
+					"name": "直播",
+					"menuId": "632",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "轉播表",
+					"menuId": "633",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				},
+				{
+					"name": "賽事影音",
+					"menuId": "634",
+					"isChild": "",
+					"productId": "",
+					"isVipProduct": "0",
+					"isLust": "0",
+					"warningInfo": {},
+					"filter": "0",
+					"filterInfo": [
+						"",
+						"",
+						""
+					],
+					"categoryInfo": []
+				}
+			],
 			"menuIcon": {
 				"tab": "",
 				"tabSelect": "",
