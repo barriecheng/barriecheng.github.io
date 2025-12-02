@@ -1,0 +1,1426 @@
+{
+	"returnCode": "1",
+	"returnMessage": "success",
+	"menuId": "632",
+	"cacheTime": "600",
+	"cf": "0_getUILayoutById_632_3_0_new_1__.json",
+	"about": "stg|getUILayoutById_632_3_0_new_1__1202141121.json||9",
+	"maxRecCount": "",
+	"displayTitle": "直播",
+	"webBackgroundImg": "",
+	"appBackgroundImg": "",
+	"bgHex": "",
+	"seoMeta": [
+		{
+			"title": "WBC經典賽2023 - Live直播-線上看｜Hami Video",
+			"description": "WBC經典賽2023直播，HamiVideo提供最完整WBC經典賽2023賽事Live直播、實況轉播、賽程表、戰績排名、即時新聞與快訊WBC經典賽2023直播，HamiVideo提供最完整WBC經典賽2023賽事Live直播、實況轉播、賽程表、戰績排名、即時新聞與快訊",
+			"keywords": "WBC, 棒球經典賽, 中華職棒, 直播, 線上看, Hami Video",
+			"img": "apl_aplm_seoMeta_homepage.png"
+		}
+	],
+	"tvShowTime": "0",
+	"UIInfo": [
+	{
+			"type": "1",
+			"titleType": "1",
+			"title": "",
+			"autoPlayLastChannel": "0",
+			"moreId": "",
+			"cardCombinationId": "109",
+			"elements": [
+				{
+					"isSort2First": "2",
+					"actionType": "0",
+					"subType": "1",
+					"productType": "",
+					"vodType": "",
+					"liveType": "",
+					"categoryStyle": "2",
+					"productId": "",
+					"contentPk": "",
+					"timeShift": "",
+					"functionId": "",
+					"imageId": "apl_aplm_banner_114UBA_1112.jpg",
+					"title": "UBA大專籃球開打",
+					"subTitle": "第一、第二場次全播",
+					"descText": "2",
+					"productName": "",
+					"productNameEn": "",
+					"description": "",
+					"length": "",
+					"displaySeries": "",
+					"percent": "",
+					"imdbRating": "",
+					"authDevice": "",
+					"quality": "",
+					"score": "",
+					"startTime": "1705420800",
+					"endTime": "1785427200",
+					"isPlay": "",
+					"link": "",
+					"tagImageId": "",
+					"additionalTag": "",
+					"listPrice": "",
+					"freeProduct": "",
+					"iconType": "",
+					"category": "",
+					"subcategory": "",
+					"seriesDone": "",
+					"isAdult": "",
+					"contentCount": "",
+					"playingTimes": "",
+					"competitionText": "",
+					"countryInfo": {},
+					"programInfo": [],
+					"isTWCheck": "",
+					"isTWCheckMsg": "",
+					"publishYear": "",
+					"country": "",
+					"rating": "",
+					"previewUrl": "",
+					"previewContentPk": "",
+					"internetAdIdWeb": "",
+					"internetAdIdWebSmall": "",
+					"internetAdIdApp": "",
+					"internetAdId2Web": "",
+					"internetAdId2WebSmall": "",
+					"internetAdId2App": "",
+					"internetAdId2Tv": "",
+					"subscribeParam": "",
+					"isComingUp": "",
+					"comingupStime": "",
+					"displayStart": "",
+					"isSpeedup": ""
+				},
+				{
+					"isSort2First": "11",
+					"actionType": "0",
+					"subType": "1",
+					"productType": "",
+					"vodType": "",
+					"liveType": "",
+					"categoryStyle": "2",
+					"productId": "",
+					"contentPk": "",
+					"timeShift": "",
+					"functionId": "",
+					"imageId": "apl_aplm_banner_MpsNtS8b.20251112161203.003.jpg",
+					"title": "全新賽季 HBL高中籃球正式開打",
+					"subTitle": "12/20-12/26 女生預賽/男生複賽 獨家呈現",
+					"descText": "2",
+					"productName": "",
+					"productNameEn": "",
+					"description": "",
+					"length": "",
+					"displaySeries": "",
+					"percent": "",
+					"imdbRating": "",
+					"authDevice": "",
+					"quality": "",
+					"score": "",
+					"startTime": "1701619200",
+					"endTime": "1845993599",
+					"isPlay": "",
+					"link": "",
+					"tagImageId": "",
+					"additionalTag": "",
+					"listPrice": "",
+					"freeProduct": "",
+					"iconType": "",
+					"category": "",
+					"subcategory": "",
+					"seriesDone": "",
+					"isAdult": "",
+					"contentCount": "",
+					"playingTimes": "",
+					"competitionText": "",
+					"countryInfo": {},
+					"programInfo": [],
+					"isTWCheck": "",
+					"isTWCheckMsg": "",
+					"publishYear": "",
+					"country": "",
+					"rating": "",
+					"previewUrl": "",
+					"previewContentPk": "",
+					"internetAdIdWeb": "",
+					"internetAdIdWebSmall": "",
+					"internetAdIdApp": "",
+					"internetAdId2Web": "",
+					"internetAdId2WebSmall": "",
+					"internetAdId2App": "",
+					"internetAdId2Tv": "",
+					"subscribeParam": "",
+					"isComingUp": "",
+					"comingupStime": "",
+					"displayStart": "",
+					"isSpeedup": ""
+				}
+			]
+		},
+		{
+			"type": "2",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"elements": []
+		},
+		{
+			"type": "2",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"elements": []
+		},
+		{
+			"type": "19",
+			"titleType": "1",
+			"title": "",
+			"subTitle": "",
+			"style": "base",
+			"moreId": "",
+			"key": "488",
+			"filterTagRDProductId": "",
+			"filterTagRDImg": "",
+			"filterTagRDProductIdV2": "",
+			"filterTagRDImgV2": "_01ticket",
+			"elements": [],
+			"onTime": "1"
+		},
+		{
+			"type": "340103",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"elements": [
+				{
+					"actionType": "0",
+					"subType": "",
+					"productType": "",
+					"productId": "",
+					"contentPk": "",
+					"timeShift": "",
+					"functionId": "",
+					"imageId": "apl_aplm_countDown_GcYEXVYG.20240515093829.029.png",
+					"title": "",
+					"subTitle": "",
+					"descText": "",
+					"productName": "",
+					"description": "1",
+					"length": "",
+					"displaySeries": "",
+					"percent": "",
+					"imdbRating": "",
+					"score": "",
+					"startTime": "1772640000",
+					"endTime": "",
+					"isPlay": "",
+					"link": "",
+					"tagImageId": "",
+					"additionalTag": "",
+					"listPrice": "",
+					"freeProduct": "",
+					"category": "",
+					"subcategory": "",
+					"seriesDone": "",
+					"isAdult": "",
+					"contentCount": "",
+					"playingTimes": "",
+					"competitionText": "",
+					"countryInfo": {},
+					"programInfo": []
+				}
+			]
+		},
+		{
+			"type": "1003",
+			"titleType": "1",
+			"title": "WBC經典賽頻道直播",
+			"moreId": "",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"liveType": "",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"timeShift": "1",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"link": "OTT_LIVE_0000001744",
+					"tagImageId": "",
+					"freeProduct": "1",
+					"programInfo": [
+						{
+							"programName": "WBC棒球經典賽 捷克 VS 韓國 預賽C組 3/5(重)",
+							"startTime": "1764604800",
+							"endTime": "1764647999",
+							"tsId": "OTT_TS_0000001744_2025120200000020251202115959",
+							"hintSE": "2025-12-02 00:00:00~2025-12-02 11:59:59"
+						},
+						{
+							"programName": "LIVE WBC棒球經典賽 澳洲 VS 捷克 預賽C組 3/6(普)",
+							"startTime": "1764648000",
+							"endTime": "1764658799",
+							"tsId": "OTT_TS_0000001744_2025120212000020251202145959",
+							"hintSE": "2025-12-02 12:00:00~2025-12-02 14:59:59"
+						},
+						{
+							"programName": "WBC棒球經典賽 澳洲 VS 捷克 預賽C組 3/6(重)",
+							"startTime": "1764658800",
+							"endTime": "1764673199",
+							"tsId": "OTT_TS_0000001744_2025120215000020251202185959",
+							"hintSE": "2025-12-02 15:00:00~2025-12-02 18:59:59"
+						},
+						{
+							"programName": "LIVE WBC棒球經典賽 日本 VS 中華 預賽C組 3/6(普)",
+							"startTime": "1764673200",
+							"endTime": "1764683999",
+							"tsId": "OTT_TS_0000001744_2025120219000020251202215959",
+							"hintSE": "2025-12-02 19:00:00~2025-12-02 21:59:59"
+						},
+						{
+							"programName": "WBC棒球經典賽 日本 VS 中華 預賽C組 3/6(重)",
+							"startTime": "1764684000",
+							"endTime": "1764691199",
+							"tsId": "OTT_TS_0000001744_2025120222000020251202235959",
+							"hintSE": "2025-12-02 22:00:00~2025-12-02 23:59:59"
+						},
+						{
+							"programName": "WBC棒球經典賽 中華 VS 西班牙 資格賽附加賽 2/25(重)",
+							"startTime": "1764691200",
+							"endTime": "1764734399",
+							"tsId": "OTT_TS_0000001744_2025120300000020251203115959",
+							"hintSE": "2025-12-03 00:00:00~2025-12-03 11:59:59"
+						},
+						{
+							"programName": "LIVE WBC棒球經典賽 中華 VS 澳洲 預賽C組 3/5(普)",
+							"startTime": "1764734400",
+							"endTime": "1764745199",
+							"tsId": "OTT_TS_0000001744_2025120312000020251203145959",
+							"hintSE": "2025-12-03 12:00:00~2025-12-03 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"liveType": "",
+					"thumbnailImageId": "sourceImages@screen@ch80.jpg",
+					"productId": "54967",
+					"contentId": "1743",
+					"contentPk": "OTT_LIVE_0000001743",
+					"timeShift": "1",
+					"imageId": "sourceImages@Live@61@1743.png",
+					"title": "愛爾達體育2台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"link": "OTT_LIVE_0000001743",
+					"tagImageId": "",
+					"freeProduct": "0",
+					"programInfo": [
+						{
+							"programName": "F1 卡達站 正賽(普)",
+							"startTime": "1764599400",
+							"endTime": "1764606600",
+							"tsId": "OTT_TS_0000001743_2025120122300020251202003000",
+							"hintSE": "2025-12-01 22:30:00~2025-12-02 00:30:00"
+						},
+						{
+							"programName": "體壇最前線 12/1(普)",
+							"startTime": "1764606600",
+							"endTime": "1764608400",
+							"tsId": "OTT_TS_0000001743_2025120200300020251202010000",
+							"hintSE": "2025-12-02 00:30:00~2025-12-02 01:00:00"
+						},
+						{
+							"programName": "NFL 野馬 VS 司令 例行賽第十三週 12/1(普)",
+							"startTime": "1764608400",
+							"endTime": "1764619200",
+							"tsId": "OTT_TS_0000001743_2025120201000020251202040000",
+							"hintSE": "2025-12-02 01:00:00~2025-12-02 04:00:00"
+						},
+						{
+							"programName": "體壇最前線 12/1(普)",
+							"startTime": "1764619200",
+							"endTime": "1764621000",
+							"tsId": "OTT_TS_0000001743_2025120204000020251202043000",
+							"hintSE": "2025-12-02 04:00:00~2025-12-02 04:30:00"
+						},
+						{
+							"programName": "MLB好球連發#24 (AI字幕)(普)",
+							"startTime": "1764621000",
+							"endTime": "1764622500",
+							"tsId": "OTT_TS_0000001743_2025120204300020251202045500",
+							"hintSE": "2025-12-02 04:30:00~2025-12-02 04:55:00"
+						},
+						{
+							"programName": "MLB好球連發#25 (AI字幕)(普)",
+							"startTime": "1764622500",
+							"endTime": "1764624000",
+							"tsId": "OTT_TS_0000001743_2025120204550020251202052000",
+							"hintSE": "2025-12-02 04:55:00~2025-12-02 05:20:00"
+						},
+						{
+							"programName": "英超 西漢姆聯 VS 利物浦 第13輪(普)",
+							"startTime": "1764624000",
+							"endTime": "1764631500",
+							"tsId": "OTT_TS_0000001743_2025120205200020251202072500",
+							"hintSE": "2025-12-02 05:20:00~2025-12-02 07:25:00"
+						},
+						{
+							"programName": "英超 切爾西 VS 兵工廠 第13輪(普)",
+							"startTime": "1764631500",
+							"endTime": "1764639000",
+							"tsId": "OTT_TS_0000001743_2025120207250020251202093000",
+							"hintSE": "2025-12-02 07:25:00~2025-12-02 09:30:00"
+						},
+						{
+							"programName": "體壇最前線 12/1(普)",
+							"startTime": "1764639000",
+							"endTime": "1764640800",
+							"tsId": "OTT_TS_0000001743_2025120209300020251202100000",
+							"hintSE": "2025-12-02 09:30:00~2025-12-02 10:00:00"
+						},
+						{
+							"programName": "LIVE 桌球混團世界盃 小組賽第3輪 法國 VS 羅馬尼亞 12/2(普)",
+							"startTime": "1764640800",
+							"endTime": "1764648000",
+							"tsId": "OTT_TS_0000001743_2025120210000020251202120000",
+							"hintSE": "2025-12-02 10:00:00~2025-12-02 12:00:00"
+						},
+						{
+							"programName": "LIVE 桌球混團世界盃 小組賽第3輪 印度 VS 澳大利亞 12/2(普)",
+							"startTime": "1764648000",
+							"endTime": "1764655200",
+							"tsId": "OTT_TS_0000001743_2025120212000020251202140000",
+							"hintSE": "2025-12-02 12:00:00~2025-12-02 14:00:00"
+						},
+						{
+							"programName": "體壇最前線 12/1(普)",
+							"startTime": "1764655200",
+							"endTime": "1764657000",
+							"tsId": "OTT_TS_0000001743_2025120214000020251202143000",
+							"hintSE": "2025-12-02 14:00:00~2025-12-02 14:30:00"
+						},
+						{
+							"programName": "F1 卡達站 正賽(普)",
+							"startTime": "1764657000",
+							"endTime": "1764664200",
+							"tsId": "OTT_TS_0000001743_2025120214300020251202163000",
+							"hintSE": "2025-12-02 14:30:00~2025-12-02 16:30:00"
+						},
+						{
+							"programName": "MLB 季後賽回顧 世界大賽(普)",
+							"startTime": "1764664200",
+							"endTime": "1764666000",
+							"tsId": "OTT_TS_0000001743_2025120216300020251202170000",
+							"hintSE": "2025-12-02 16:30:00~2025-12-02 17:00:00"
+						},
+						{
+							"programName": "LIVE 桌球混團世界盃 小組賽第3輪 台灣 VS 瑞典 12/2(普)",
+							"startTime": "1764666000",
+							"endTime": "1764673200",
+							"tsId": "OTT_TS_0000001743_2025120217000020251202190000",
+							"hintSE": "2025-12-02 17:00:00~2025-12-02 19:00:00"
+						},
+						{
+							"programName": "LIVE 桌球混團世界盃 小組賽第3輪 中國 VS 智利 12/2(普)",
+							"startTime": "1764673200",
+							"endTime": "1764680400",
+							"tsId": "OTT_TS_0000001743_2025120219000020251202210000",
+							"hintSE": "2025-12-02 19:00:00~2025-12-02 21:00:00"
+						},
+						{
+							"programName": "MLB好球連發- 2025賽季回顧 (AI字幕) (新)(普)",
+							"startTime": "1764680400",
+							"endTime": "1764684000",
+							"tsId": "OTT_TS_0000001743_2025120221000020251202220000",
+							"hintSE": "2025-12-02 21:00:00~2025-12-02 22:00:00"
+						},
+						{
+							"programName": "LIVE 體壇最前線 12/2(普)",
+							"startTime": "1764684000",
+							"endTime": "1764685800",
+							"tsId": "OTT_TS_0000001743_2025120222000020251202223000",
+							"hintSE": "2025-12-02 22:00:00~2025-12-02 22:30:00"
+						},
+						{
+							"programName": "NFL 巨人 VS 愛國者 例行賽第十三週 12/2(普)",
+							"startTime": "1764685800",
+							"endTime": "1764694800",
+							"tsId": "OTT_TS_0000001743_2025120222300020251203010000",
+							"hintSE": "2025-12-02 22:30:00~2025-12-03 01:00:00"
+						},
+						{
+							"programName": "UEFA歐冠 切爾西 VS 巴塞隆納 第5比賽日(普)",
+							"startTime": "1764694800",
+							"endTime": "1764702000",
+							"tsId": "OTT_TS_0000001743_2025120301000020251203030000",
+							"hintSE": "2025-12-03 01:00:00~2025-12-03 03:00:00"
+						},
+						{
+							"programName": "義甲精華 第12輪(普)",
+							"startTime": "1764702000",
+							"endTime": "1764703200",
+							"tsId": "OTT_TS_0000001743_2025120303000020251203032000",
+							"hintSE": "2025-12-03 03:00:00~2025-12-03 03:20:00"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"liveType": "",
+					"thumbnailImageId": "sourceImages@screen@ELTA3.jpg",
+					"productId": "54968",
+					"contentId": "1745",
+					"contentPk": "OTT_LIVE_0000001745",
+					"timeShift": "1",
+					"imageId": "sourceImages@Live@61@1745.png",
+					"title": "愛爾達體育3台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"link": "OTT_LIVE_0000001745",
+					"tagImageId": "",
+					"freeProduct": "0",
+					"programInfo": [
+						{
+							"programName": "體壇最前線 12/1 (新)(普)",
+							"startTime": "1764604800",
+							"endTime": "1764606600",
+							"tsId": "OTT_TS_0000001745_2025120200000020251202003000",
+							"hintSE": "2025-12-02 00:00:00~2025-12-02 00:30:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第2輪 南韓 VS 台灣 12/1(普)",
+							"startTime": "1764606600",
+							"endTime": "1764613800",
+							"tsId": "OTT_TS_0000001745_2025120200300020251202023000",
+							"hintSE": "2025-12-02 00:30:00~2025-12-02 02:30:00"
+						},
+						{
+							"programName": "體壇最前線 12/1(普)",
+							"startTime": "1764613800",
+							"endTime": "1764615600",
+							"tsId": "OTT_TS_0000001745_2025120202300020251202030000",
+							"hintSE": "2025-12-02 02:30:00~2025-12-02 03:00:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第2輪 德國 VS 法國 12/1(普)",
+							"startTime": "1764615600",
+							"endTime": "1764622800",
+							"tsId": "OTT_TS_0000001745_2025120203000020251202050000",
+							"hintSE": "2025-12-02 03:00:00~2025-12-02 05:00:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第2輪 中國 VS 埃及 12/1(普)",
+							"startTime": "1764622800",
+							"endTime": "1764626700",
+							"tsId": "OTT_TS_0000001745_2025120205000020251202060500",
+							"hintSE": "2025-12-02 05:00:00~2025-12-02 06:05:00"
+						},
+						{
+							"programName": "MLB 季後賽回顧 國聯分區賽(普)",
+							"startTime": "1764626700",
+							"endTime": "1764630000",
+							"tsId": "OTT_TS_0000001745_2025120206050020251202070000",
+							"hintSE": "2025-12-02 06:05:00~2025-12-02 07:00:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第2輪 南韓 VS 台灣 12/1(普)",
+							"startTime": "1764630000",
+							"endTime": "1764637800",
+							"tsId": "OTT_TS_0000001745_2025120207000020251202091000",
+							"hintSE": "2025-12-02 07:00:00~2025-12-02 09:10:00"
+						},
+						{
+							"programName": "LIVE NFL 巨人 VS 愛國者 例行賽第十三週 12/2(普)",
+							"startTime": "1764637800",
+							"endTime": "1764649800",
+							"tsId": "OTT_TS_0000001745_2025120209100020251202123000",
+							"hintSE": "2025-12-02 09:10:00~2025-12-02 12:30:00"
+						},
+						{
+							"programName": "BWF 印度名人賽 決賽 混雙/女單 11/30(普)",
+							"startTime": "1764649800",
+							"endTime": "1764657000",
+							"tsId": "OTT_TS_0000001745_2025120212300020251202143000",
+							"hintSE": "2025-12-02 12:30:00~2025-12-02 14:30:00"
+						},
+						{
+							"programName": "BWF 印度名人賽 決賽 男雙/女單 11/30(普)",
+							"startTime": "1764657000",
+							"endTime": "1764662400",
+							"tsId": "OTT_TS_0000001745_2025120214300020251202160000",
+							"hintSE": "2025-12-02 14:30:00~2025-12-02 16:00:00"
+						},
+						{
+							"programName": "2025 BWF世界羽球雜誌#11 加拿大新星 賴浩俊特集(普)",
+							"startTime": "1764662400",
+							"endTime": "1764664200",
+							"tsId": "OTT_TS_0000001745_2025120216000020251202163000",
+							"hintSE": "2025-12-02 16:00:00~2025-12-02 16:30:00"
+						},
+						{
+							"programName": "NFL 巨人 VS 愛國者 例行賽第十三週 12/2(普)",
+							"startTime": "1764664200",
+							"endTime": "1764675000",
+							"tsId": "OTT_TS_0000001745_2025120216300020251202193000",
+							"hintSE": "2025-12-02 16:30:00~2025-12-02 19:30:00"
+						},
+						{
+							"programName": "2025 BWF世界羽球雜誌#11 加拿大新星 賴浩俊特集(普)",
+							"startTime": "1764675000",
+							"endTime": "1764676800",
+							"tsId": "OTT_TS_0000001745_2025120219300020251202200000",
+							"hintSE": "2025-12-02 19:30:00~2025-12-02 20:00:00"
+						},
+						{
+							"programName": "BWF 印度名人賽 決賽 混雙/女單 11/30(普)",
+							"startTime": "1764676800",
+							"endTime": "1764684000",
+							"tsId": "OTT_TS_0000001745_2025120220000020251202220000",
+							"hintSE": "2025-12-02 20:00:00~2025-12-02 22:00:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第3輪 台灣 VS 瑞典 12/2(普)",
+							"startTime": "1764684000",
+							"endTime": "1764691200",
+							"tsId": "OTT_TS_0000001745_2025120222000020251203000000",
+							"hintSE": "2025-12-02 22:00:00~2025-12-03 00:00:00"
+						},
+						{
+							"programName": "體壇最前線 12/2 (新)(普)",
+							"startTime": "1764691200",
+							"endTime": "1764693000",
+							"tsId": "OTT_TS_0000001745_2025120300000020251203003000",
+							"hintSE": "2025-12-03 00:00:00~2025-12-03 00:30:00"
+						},
+						{
+							"programName": "桌球混團世界盃 小組賽第3輪 台灣 VS 瑞典 12/2(普)",
+							"startTime": "1764693000",
+							"endTime": "1764700200",
+							"tsId": "OTT_TS_0000001745_2025120300300020251203023000",
+							"hintSE": "2025-12-03 00:30:00~2025-12-03 02:30:00"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "1",
+			"title": "LIVE節目表",
+			"moreId": "",
+			"elements": []
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764518400",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 中華 VS 澳洲 預賽C組 3/5(普)",
+							"startTime": "1764561600",
+							"endTime": "1764572399",
+							"tsId": "OTT_TS_0000001744_2025120112000020251201145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-01 12:00:00~2025-12-01 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 捷克 VS 韓國 預賽C組 3/5(普)",
+							"startTime": "1764586800",
+							"endTime": "1764597599",
+							"tsId": "OTT_TS_0000001744_2025120119000020251201215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-01 19:00:00~2025-12-01 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764604800",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 澳洲 VS 捷克 預賽C組 3/6(普)",
+							"startTime": "1764648000",
+							"endTime": "1764658799",
+							"tsId": "OTT_TS_0000001744_2025120212000020251202145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-02 12:00:00~2025-12-02 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 日本 VS 中華 預賽C組 3/6(普)",
+							"startTime": "1764673200",
+							"endTime": "1764683999",
+							"tsId": "OTT_TS_0000001744_2025120219000020251202215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-02 19:00:00~2025-12-02 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764691200",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 中華 VS 澳洲 預賽C組 3/5(普)",
+							"startTime": "1764734400",
+							"endTime": "1764745199",
+							"tsId": "OTT_TS_0000001744_2025120312000020251203145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-03 12:00:00~2025-12-03 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 捷克 VS 韓國 預賽C組 3/5(普)",
+							"startTime": "1764759600",
+							"endTime": "1764770399",
+							"tsId": "OTT_TS_0000001744_2025120319000020251203215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-03 19:00:00~2025-12-03 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764777600",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 澳洲 VS 捷克 預賽C組 3/6(普)",
+							"startTime": "1764820800",
+							"endTime": "1764831599",
+							"tsId": "OTT_TS_0000001744_2025120412000020251204145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-04 12:00:00~2025-12-04 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 日本 VS 中華 預賽C組 3/6(普)",
+							"startTime": "1764846000",
+							"endTime": "1764856799",
+							"tsId": "OTT_TS_0000001744_2025120419000020251204215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-04 19:00:00~2025-12-04 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764864000",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 中華 VS 澳洲 預賽C組 3/5(普)",
+							"startTime": "1764907200",
+							"endTime": "1764917999",
+							"tsId": "OTT_TS_0000001744_2025120512000020251205145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-05 12:00:00~2025-12-05 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 捷克 VS 韓國 預賽C組 3/5(普)",
+							"startTime": "1764932400",
+							"endTime": "1764943199",
+							"tsId": "OTT_TS_0000001744_2025120519000020251205215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-05 19:00:00~2025-12-05 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1764950400",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 澳洲 VS 捷克 預賽C組 3/6(普)",
+							"startTime": "1764993600",
+							"endTime": "1765004399",
+							"tsId": "OTT_TS_0000001744_2025120612000020251206145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-06 12:00:00~2025-12-06 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 日本 VS 中華 預賽C組 3/6(普)",
+							"startTime": "1765018800",
+							"endTime": "1765029599",
+							"tsId": "OTT_TS_0000001744_2025120619000020251206215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-06 19:00:00~2025-12-06 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "7",
+			"titleType": "2",
+			"title": "1765036800",
+			"elements": [
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 中華 VS 澳洲 預賽C組 3/5(普)",
+							"startTime": "1765080000",
+							"endTime": "1765090799",
+							"tsId": "OTT_TS_0000001744_2025120712000020251207145959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-07 12:00:00~2025-12-07 14:59:59"
+						}
+					]
+				},
+				{
+					"actionType": "6",
+					"productType": "4",
+					"productId": "54966",
+					"contentId": "1744",
+					"contentPk": "OTT_LIVE_0000001744",
+					"link": "OTT_LIVE_0000001744",
+					"tsStartTime": "2017-03-27 12:00:00",
+					"timeShift": "1",
+					"tsReservedDays": "7",
+					"imageId": "sourceImages@Live@61@1744.png",
+					"thumbnailImageId": "sourceImages@screen@ch26.jpg",
+					"freeProduct": "1",
+					"title": "愛爾達體育1台",
+					"authDevice": "1,2,3,4",
+					"quality": "hd",
+					"warningInfo": {
+						"title": "",
+						"app": "",
+						"web": "",
+						"tv": ""
+					},
+					"tagImageId": "",
+					"additionalTag": "",
+					"liveType": "",
+					"adVendor": "",
+					"isAdult": "0",
+					"historyTimes": "20319930",
+					"channelName": "愛爾達體育1台",
+					"category": "Hami電視",
+					"subcategory": "運動",
+					"programInfo": [
+						{
+							"programName": "LIVE WBC棒球經典賽 捷克 VS 韓國 預賽C組 3/5(普)",
+							"startTime": "1765105200",
+							"endTime": "1765115999",
+							"tsId": "OTT_TS_0000001744_2025120719000020251207215959",
+							"description": "",
+							"thumbnail": "",
+							"countryInfo": {
+								"homeName": "",
+								"homeImg": "",
+								"visitorName": "",
+								"visitorImg": ""
+							},
+							"imageSports": "",
+							"imageMedals": "",
+							"imageCT": "",
+							"hintSE": "2025-12-07 19:00:00~2025-12-07 21:59:59"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "702",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"sourceData": "0",
+			"elements": []
+		},
+		{
+			"type": "3421",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"elements": [
+				{
+					"imageId": "apl_aplm_remind_remind_web.png"
+				}
+			]
+		},
+		{
+			"type": "2",
+			"titleType": "1",
+			"title": "",
+			"moreId": "",
+			"elements": []
+		}
+	]
+}
