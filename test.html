@@ -1,12 +1,15 @@
 <script type="text/javascript" src="https://static-hamivideo.cdn.hinet.net/resources/js/jquery.min.js?v=20260202_01"></script>
-<div class="btSet mBtm bt_lock" id="step2Btn" style="margin-top:40px;"><a href="#" onclick="doOtpLogin();return false;" id="doOptLoginButton">完成</a></div>
+<div class="btSet mBtm bt_lock" id="step2Btn" style="margin-top:40px;">
+<a href="#" onclick="doOtpLogin();return false;" id="doOptLoginButton">完成</a></div>
+<form name="loginForm" method="post" action="test2.html" >
+</form>
 <script>
 
 
 	function doOtpLogin(){
 		
 		$('#doOptLoginButton').attr('onclick','javascript:void();');
-		
+		document.loginForm.submit();
 		alert("end");
 	}
 </script>
