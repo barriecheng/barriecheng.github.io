@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Notifications API 結合 Google Cloud 的應用</title>
+</head>
+
+<body>
+Web Notifications API 結合 Google Cloud 的應用
+  <script type="module" src="/firebase-messaging-sw.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+    import { getMessaging, getToken } from 'https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js';
+
+    // 初始化 Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9lJFHBl0RQ6joVHvGX4kOkTsgyWZtpYQ",
+      authDomain: "web-notification-459705.firebaseapp.com",
+      projectId: "web-notification-459705",
+      storageBucket: "web-notification-459705.firebasestorage.app",
+      messagingSenderId: "314033823953",
+      appId: "1:314033823953:web:c6a222651ab47ea48465f0",
+      measurementId: "G-G4XLB03BNN"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+
+    // 取得 FCM Token
+    getToken(messaging, { vapidKey: 'BNAUkmi0IZDHQHnK6ABvHQoYJ-6ybEdxv-mq2jC_ZRxzk6soFSVMf9JC2cUceuJPkL20tYMpcYSxEjzhfSmh8l8' })
+      .then(token => {
+        console.log('FCM Token:', token);
+      })
+      .catch(err => console.error('can not get FCM token:', err));
+  </script>
+
+</body>
+
+</html>
