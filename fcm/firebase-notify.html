@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
@@ -8,12 +8,14 @@
 </head>
 
 <body>
-  <script type="module" src="/firebase-messaging-sw.js"></script>
+  <h1>Web Notifications API 結合 Google Cloud 的應用</h1>
+  <button id="enable-notify-btn">開啟通知並取得 Token</button>
+
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
-    import { getMessaging, getToken } from 'https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js';
+    import { getMessaging, getToken, onMessage } from 'https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js';
 
-    // 初始化 Firebase
+    // 1. 初始化 Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyA9lJFHBl0RQ6joVHvGX4kOkTsgyWZtpYQ",
       authDomain: "web-notification-459705.firebaseapp.com",
@@ -27,15 +29,52 @@
     const app = initializeApp(firebaseConfig);
     const messaging = getMessaging(app);
 
-    // 取得 FCM Token
-    getToken(messaging, { vapidKey: 'BNAUkmi0IZDHQHnK6ABvHQoYJ-6ybEdxv-mq2jC_ZRxzk6soFSVMf9JC2cUceuJPkL20tYMpcYSxEjzhfSmh8l8' })
-      .then(token => {
-        console.log('FCM Token:', token);
-      })
-      .catch(err => console.error('can not get FCM token:', err));
+    // 2. 正確註冊 Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        .then((registration) => {
+          console.log('Service Worker 註冊成功，範圍:', registration.scope);
+        })
+        .catch((err) => {
+          console.error('Service Worker 註冊失敗:', err);
+        });
+    }
+
+    // 3. 請求權限與取得 Token 的函式
+    async function requestNotificationPermission() {
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+          console.log('通知權限已獲得！');
+
+          const token = await getToken(messaging, { 
+            vapidKey: 'BNAUkmi0IZDHQHnK6ABvHQoYJ-6ybEdxv-mq2jC_ZRxzk6soFSVMf9JC2cUceuJPkL20tYMpcYSxEjzhfSmh8l8' 
+          });
+
+          if (token) {
+            console.log('FCM Token:', token);
+          } else {
+            console.warn('無法取得 Token，請確認設定');
+          }
+        } else {
+          console.warn('使用者拒絕了通知權限');
+        }
+      } catch (err) {
+        console.error('取得 Token 失敗:', err);
+      }
+    }
+
+    // 建議由按鈕觸發（瀏覽器大多禁止網頁一載入就強制跳出通知請求）
+    document.getElementById('enable-notify-btn').addEventListener('click', () => {
+      requestNotificationPermission();
+    });
+
+    // 4. 監聽當前頁面 (前台) 收到推播時的動作
+    onMessage(messaging, (payload) => {
+      console.log('前台收到訊息:', payload);
+      alert(`收到通知: ${payload.notification?.title || ''}\n${payload.notification?.body || ''}`);
+    });
   </script>
-
 </body>
-
 
 </html>
