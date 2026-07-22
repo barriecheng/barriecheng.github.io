@@ -75,10 +75,23 @@
     });
 
     // 4. 監聽當前頁面 (前台) 收到推播時的動作
-    onMessage(messaging, (payload) => {
-      console.log('前台收到訊息:', payload);
-      alert(`收到通知: ${payload.notification?.title || ''}\n${payload.notification?.body || ''}`);
-    });
+   // 監聽前台收到訊息
+onMessage(messaging, (payload) => {
+  console.log('前台收到完整 payload:', payload);
+
+  // 1. 嘗試抓取 notification 欄位
+  let title = payload.notification?.title;
+  let body = payload.notification?.body;
+
+  // 2. 如果沒有 notification，嘗試從 data 欄位抓取
+  if (!title && payload.data) {
+    title = payload.data.title || '新通知';
+    body = payload.data.body || payload.data.message || JSON.stringify(payload.data);
+  }
+
+  // 3. 顯示結果
+  alert(`收到通知！\n標題：${title}\n內容：${body}`);
+});
   </script>
 </body>
 
