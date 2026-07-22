@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <h1>Web Notifications API 結合 Google Cloud 的應用</h1>
+  <h1>Web Notifications API 結合 Google Cloud 的應用1</h1>
   <button id="enable-notify-btn">開啟通知並取得 Token</button>
 
   <script type="module">
@@ -29,10 +29,14 @@
     const app = initializeApp(firebaseConfig);
     const messaging = getMessaging(app);
 
-    // 2. 正確註冊 Service Worker
+    // 用變數保存已註冊的 Service Worker
+    let swRegistration = null;
+
+    // 2. 正確註冊 Service Worker 並保存 registration 物件
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/firebase-messaging-sw.js')
         .then((registration) => {
+          swRegistration = registration;
           console.log('Service Worker 註冊成功，範圍:', registration.scope);
         })
         .catch((err) => {
@@ -43,17 +47,22 @@
     // 3. 請求權限與取得 Token 的函式
     async function requestNotificationPermission() {
       try {
-        // 檢查目前瀏覽器的權限狀態
-      if (Notification.permission === 'denied') {
-        alert('通知權限已被封鎖！請點擊網址列左側的圖示，將「通知」權限改為「允許」後重新整理頁面。');
-        return;
-      }
+        if (Notification.permission === 'denied') {
+          alert('通知權限已被封鎖！請點擊網址列左側圖示允許權限後重新整理。');
+          return;
+        }
+
         const permission = await Notification.requestPermission();
         if (permission === 'granted') {
           console.log('通知權限已獲得！');
 
+          // 核心修正：確認 Service Worker 已經準備好才拿 Token
+          const registration = swRegistration || await navigator.serviceWorker.ready;
+
+          // 核心修正：加入 serviceWorkerRegistration 參數！
           const token = await getToken(messaging, { 
-            vapidKey: 'BNAUkmi0IZDHQHnK6ABvHQoYJ-6ybEdxv-mq2jC_ZRxzk6soFSVMf9JC2cUceuJPkL20tYMpcYSxEjzhfSmh8l8' 
+            vapidKey: 'BNAUkmi0IZDHQHnK6ABvHQoYJ-6ybEdxv-mq2jC_ZRxzk6soFSVMf9JC2cUceuJPkL20tYMpcYSxEjzhfSmh8l8',
+            serviceWorkerRegistration: registration 
           });
 
           if (token) {
@@ -69,29 +78,24 @@
       }
     }
 
-    // 建議由按鈕觸發（瀏覽器大多禁止網頁一載入就強制跳出通知請求）
     document.getElementById('enable-notify-btn').addEventListener('click', () => {
       requestNotificationPermission();
     });
 
-    // 4. 監聽當前頁面 (前台) 收到推播時的動作
-   // 監聽前台收到訊息
-onMessage(messaging, (payload) => {
-  console.log('前台收到完整 payload:', payload);
+    // 4. 監聽前台收到訊息
+    onMessage(messaging, (payload) => {
+      console.log('前台收到完整 payload:', payload);
 
-  // 1. 嘗試抓取 notification 欄位
-  let title = payload.notification?.title;
-  let body = payload.notification?.body;
+      let title = payload.notification?.title;
+      let body = payload.notification?.body;
 
-  // 2. 如果沒有 notification，嘗試從 data 欄位抓取
-  if (!title && payload.data) {
-    title = payload.data.title || '新通知';
-    body = payload.data.body || payload.data.message || JSON.stringify(payload.data);
-  }
+      if (!title && payload.data) {
+        title = payload.data.title || '新通知';
+        body = payload.data.body || payload.data.message || JSON.stringify(payload.data);
+      }
 
-  // 3. 顯示結果
-  alert(`收到通知！\n標題：${title}\n內容：${body}`);
-});
+      alert(`收到通知！\n標題：${title}\n內容：${body}`);
+    });
   </script>
 </body>
 
