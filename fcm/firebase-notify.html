@@ -34,7 +34,7 @@
 
     // 2. 正確註冊 Service Worker 並保存 registration 物件
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./firebase-messaging-sw.js')
+      navigator.serviceWorker.register('/firebase-messaging-sw.js')
         .then((registration) => {
           swRegistration = registration;
           console.log('Service Worker 註冊成功，範圍:', registration.scope);
