@@ -1,10 +1,8 @@
 // firebase-messaging-sw.js
-// 必須放在網站根目錄（或至少能涵蓋你要的 scope），且用 importScripts 載入 compat 版 SDK
-
 importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging-compat.js');
 
-// 1. 初始化 Firebase（設定要和 index.html 完全一致）
+// 1. 初始化 Firebase（Service Worker 裡必須用 compat 版本，因為不支援 ES module import）
 firebase.initializeApp({
   apiKey: "AIzaSyA9lJFHBl0RQ6joVHvGX4kOkTsgyWZtpYQ",
   authDomain: "web-notification-459705.firebaseapp.com",
@@ -15,46 +13,45 @@ firebase.initializeApp({
   measurementId: "G-G4XLB03BNN"
 });
 
-// 2. 取得 messaging 實例
 const messaging = firebase.messaging();
 
-// 3. 處理背景訊息
+// 2. 監聽背景訊息
 messaging.onBackgroundMessage((payload) => {
-  console.log('[firebase-messaging-sw.js] 收到背景訊息 payload:', payload);
+  console.log('[firebase-messaging-sw.js] 收到背景訊息:', payload);
 
-  const notificationTitle = payload.notification?.title
-    || payload.data?.title
-    || '新通知';
+  let title = payload.notification?.title;
+  let body = payload.notification?.body;
+
+  // 如果沒有 notification 欄位，改用 data 欄位（data-only 訊息）
+  if (!title && payload.data) {
+    title = payload.data.title || '新通知';
+    body = payload.data.body || payload.data.message || '';
+  }
 
   const notificationOptions = {
-    body: payload.notification?.body
-      || payload.data?.body
-      || payload.data?.message
-      || '',
-    icon: payload.notification?.icon || '/icon.png', // 可換成你自己的圖示路徑
-    data: payload.data || {} // 保留 data，供 notificationclick 使用
+    body: body,
+    icon: payload.notification?.image || '/icon.png', // 換成你自己的 icon 路徑
+    data: payload.data || {} // 保留 data，讓點擊事件可以取用
   };
 
-  self.registration.showNotification(notificationTitle, notificationOptions);
+  self.registration.showNotification(title, notificationOptions);
 });
 
-// 4. （可選）點擊通知時的行為
+// 3. （選用）點擊通知後的行為，例如導向指定網址
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
-  const clickUrl = event.notification.data?.click_action || '/';
+  const targetUrl = event.notification.data?.click_action || '/';
 
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
-      // 如果已經有分頁開著，直接聚焦它
       for (const client of clientList) {
-        if (client.url === clickUrl && 'focus' in client) {
+        if (client.url === targetUrl && 'focus' in client) {
           return client.focus();
         }
       }
-      // 否則開新分頁
       if (clients.openWindow) {
-        return clients.openWindow(clickUrl);
+        return clients.openWindow(targetUrl);
       }
     })
   );
