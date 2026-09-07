@@ -1,0 +1,241 @@
+/* 20260813 Jenson PIP Subtitle render fix */
+/* 自訂 Document PiP 的全視窗影片、固定字幕安全區與精簡控制列；所有 selector 僅作用於 PiP host。 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+body > .hami-custom-document-pip-host[data-hami-custom-document-pip="true"] {
+  --hami-custom-pip-controls-safe-area: clamp(76px, 22vh, 128px);
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background: #000;
+  cursor: default;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"][data-hami-ui-hidden="true"] {
+  cursor: none;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .plyr__video-wrapper,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] video {
+  display: block;
+  object-fit: contain;
+  pointer-events: auto !important;
+}
+
+/* HLS 繼續只顯示 Plyr captions；原生 TextTrack 畫面層保持隱藏，避免同一句字幕重複出現。 */
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] video::-webkit-media-text-track-container {
+  display: none !important;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .plyr__captions {
+  bottom: var(--hami-custom-pip-controls-safe-area) !important;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .plyr__poster,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .plyr__captions,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] #dash-ttml-caption,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] #dash-ttml-caption * {
+  pointer-events: none !important;
+}
+
+/* 滑鼠移出播放內容區後，controls 整組淡出；字幕安全區不隨顯隱改變，避免 DASH 換句或 controls 淡出時上下跳動。 */
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-controls {
+  position: absolute;
+  z-index: 2147483647;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"][data-hami-ui-hidden="true"] .hami-custom-pip-controls {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* HTML 子節點可自行覆寫父層 pointer-events；隱藏時強制停用全部互動，避免看不見的按鈕或 range 仍攔截影片 click。 */
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"][data-hami-ui-hidden="true"] .hami-custom-pip-controls,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"][data-hami-ui-hidden="true"] .hami-custom-pip-controls * {
+  pointer-events: none !important;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(54px, 15vmin, 82px);
+  height: clamp(54px, 15vmin, 82px);
+  padding: 0;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.68);
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button:hover,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button:focus-visible {
+  background: rgba(0, 0, 0, 0.82);
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 19px solid currentColor;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::before,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::after {
+  position: absolute;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon {
+  inset: 0;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::before,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::after {
+  top: 50%;
+  width: 7px;
+  height: 25px;
+  content: '';
+  transform: translateY(-50%);
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::before {
+  left: calc(50% - 10px);
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-pause-icon::after {
+  right: calc(50% - 10px);
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button[data-hami-playing="true"] .hami-custom-pip-play-icon,
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button[data-hami-playing="false"] .hami-custom-pip-pause-icon {
+  display: none;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-bottom-controls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  min-height: var(--hami-custom-pip-controls-safe-area);
+  box-sizing: border-box;
+  align-content: end;
+  padding: 24px clamp(14px, 3vw, 28px) clamp(12px, 2.5vh, 22px);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.82) 100%);
+  pointer-events: auto;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline {
+  --hami-custom-pip-progress: 0%;
+  width: 100%;
+  height: 18px;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff var(--hami-custom-pip-progress),
+    rgba(255, 255, 255, 0.42) var(--hami-custom-pip-progress),
+    rgba(255, 255, 255, 0.42) 100%
+  );
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline:disabled {
+  cursor: default;
+  opacity: 0.48;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-timeline:disabled::-webkit-slider-thumb {
+  display: none;
+}
+
+.hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-current-time {
+  justify-self: start;
+  font-family: Arial, 'Microsoft JhengHei', sans-serif;
+  font-size: clamp(14px, 4vmin, 22px);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-height: 260px) {
+  .hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-playback-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hami-custom-document-pip-host[data-hami-custom-document-pip="true"] .hami-custom-pip-bottom-controls {
+    gap: 3px;
+    padding-bottom: 8px;
+  }
+}
